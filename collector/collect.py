@@ -24,6 +24,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import alerts  # noqa: E402
 import summary  # noqa: E402
+import vault  # noqa: E402
 import wfm  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -34,7 +35,7 @@ PLATFORM = os.environ.get("WFM_PLATFORM", "pc")
 FIELDS = ["ts", "slug", "sell", "buy", "source"]
 CATALOGUE_MAX_AGE = timedelta(days=7)
 MAX_FAILED_SHARE = 0.5  # more failures than this means something is wrong: write nothing
-CATALOGUE_SCOPE = 2     # bump when the rules for which items to track change, to force a refresh
+CATALOGUE_SCOPE = 3     # bump when the rules for which items to track change, to force a refresh
 WEAPON_CLASSES = ("primary", "secondary", "melee")
 SKIP_TAGS = {"archwing", "mod", "skin", "sentinel", "necramech"}
 
@@ -52,9 +53,13 @@ def load_json(path: Path, default):
     return default
 
 
-def save_json(path: Path, data) -> None:
+def save_json(path: Path, data, compact: bool = False) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(data, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    if compact:
+        text = json.dumps(data, separators=(",", ":"), ensure_ascii=False)
+    else:
+        text = json.dumps(data, indent=1, ensure_ascii=False)
+    path.write_text(text + "\n", encoding="utf-8")
 
 
 def item_name(item: dict) -> str:
@@ -115,6 +120,15 @@ def refresh_sets(at: datetime) -> list:
     if not any(s["group"] == "warframe" and s["kind"] == "set" for s in sets):
         raise wfm.ApiError("item catalogue had no prime Warframe sets; the API may have changed")
 
+    try:
+        known = vault.annotate(sets, vault.fetch(wfm.user_agent()))
+        print(f"vault status: known for {known} of {len(sets)} items")
+    except (OSError, ValueError) as err:  # network trouble or bad JSON: keep what we had
+        previous = {s["slug"]: s.get("vaulted") for s in (cached or {}).get("sets", [])}
+        for s in sets:
+            s["vaulted"] = previous.get(s["slug"])
+        print(f"  ! vault status unavailable ({err}); keeping the last known")
+
     save_json(SETS_FILE, {
         "fetched": at.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "versions": fingerprint,
@@ -156,7 +170,7 @@ def main() -> int:
     at = now()
     hour = at.replace(minute=0, second=0, microsecond=0)
     ts = hour.strftime("%Y-%m-%dT%H:%M:%SZ")
-    print(f"prime-set-tracker {wfm.VERSION} · {ts} · platform {PLATFORM}")
+    print(f"warframe-price-tracker {wfm.VERSION} · {ts} · platform {PLATFORM}")
 
     sets = refresh_sets(at)
     rows, failed = [], []
@@ -178,7 +192,7 @@ def main() -> int:
     print(f"saved {added} rows ({len(failed)} items failed)")
 
     latest = summary.build(HISTORY, sets, at, PLATFORM, wfm.VERSION)
-    save_json(DATA / "latest.json", latest)
+    save_json(DATA / "latest.json", latest, compact=True)  # ~700 items x 90 chart points
     alerts.check(latest, ROOT / "config" / "alerts.json", DATA / "alerts_state.json", wfm.user_agent())
     return 0
 

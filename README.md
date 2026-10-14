@@ -1,10 +1,10 @@
-# Prime Set Tracker (beta)
+# Warframe Price Tracker (beta)
 
-Price trends for prime Warframes and prime primary, secondary and melee weapons (full sets and every part and blueprint), built on the [warframe.market](https://warframe.market) public API.
+An unofficial fan-made price tracker. Price trends for prime Warframes and prime primary, secondary and melee weapons (full sets and every part and blueprint), built on the [warframe.market](https://warframe.market) public API.
 
-warframe.market shows current orders, but its price history stopped updating in August 2026 (the v1 statistics API is deprecated). This project keeps its own history: a GitHub Actions job checks the price of about 700 prime items each hour, saves the numbers in this repo, and a GitHub Pages site shows them as a wall of cards with 30-day charts, with tabs for Warframes, Primary, Secondary and Melee, and Sets / Parts.
+warframe.market shows current orders, but its price history stopped updating in August 2026 (the v1 statistics API is deprecated). This project keeps its own history: a GitHub Actions job checks the price of about 700 prime items each hour, saves the numbers in this repo, and a GitHub Pages site shows them as a wall of cards with 90-day charts, with Near lows, Rising and My items (Owned, Tracking) views plus tabs for Warframes, Primary, Secondary and Melee, and Sets / Parts.
 
-> **Beta.** Version `0.2.0-beta`. Layout, data format and numbers may change, and early averages are based on only a few days of data. The page is marked `noindex` so search engines skip it while it's in beta.
+> **Beta.** Version `0.5.0-beta`. Layout, data format and numbers may change, and early averages are based on only a few days of data. The page is marked `noindex` so search engines skip it while it's in beta.
 
 ## How it works
 
@@ -22,6 +22,13 @@ every hour at :17 (UTC)
 - **Price** = lowest sell listing; **top buy** = highest buy order. Both come from the item's top orders.
 - **Averages** (7 and 30 days) are averages of each day's median lowest-sell price, shown once there are at least 3 days of data.
 - **Change %** compares the current lowest sell with the 30-day average. Blue means cheaper than usual, orange means pricier.
+- **Charts** cover the last 90 days and show their date range, the high and low, and the price on the day you hover. Days before 14 Oct 2026 come from the seeded v1 history (daily median sale price), later days are the tracker's own lowest-sell snapshots.
+- **Near lows** lists items at or near (within 5%) their lowest price in the chart window and at least 10% under their 30-day average, biggest discount first.
+- **Rising** lists items at least 10% over their 30-day average whose 7-day average is also at least 5% over it, so a single spike doesn't count. Biggest rise first.
+- **Vaulted / Farmable** comes from the community [WFCD warframe-items](https://github.com/WFCD/warframe-items) dataset (warframe.market doesn't publish it), refreshed with the item list about weekly. Parts take their set's status. Brand-new primes can show "unknown" until WFCD adds them.
+- **My items** has two tabs, saved in your browser (localStorage), not in this repo. **Owned** totals your items at the lowest sell, at the top buy order and in ducats, and charts the total over 90 days. **Tracking** lists starred items; give one a target price and it is marked "Target hit" (and sorted to the top) once the lowest sell is at or under it. The page only checks while it is open. Export / Import moves both lists between browsers.
+- **Layout**: Rows (a dense screener table, the default) or Cards (bigger charts with a hover readout).
+- Both lists skip items under 10p (a 1-2p move looks like a huge percentage) and items with under 30 days of history (new releases keep falling for weeks). The thresholds are at the top of `collector/summary.py`. These are price signals, not trading advice.
 - **What's tracked:** every item tagged prime on warframe.market that is a Warframe or a primary, secondary or melee weapon, both the full set and each part. Sentinels, archwing, Kavasa collar and mods are left out. Weapon parts aren't tagged primary/secondary/melee, so they take the category of the set whose name they start with (Nikana Prime Blade → Melee).
 - Only these summary numbers are stored. No individual orders or usernames are kept.
 
@@ -81,6 +88,7 @@ The collector follows the [API rules](https://docs.warframe.market/docs/rules/ov
 | `collector/wfm.py` | API client: spacing between calls, retries, User-Agent |
 | `collector/summary.py` | Builds `data/latest.json` from the history files |
 | `collector/alerts.py` | Discord alerts |
+| `collector/vault.py` | Vaulted status from WFCD warframe-items |
 | `collector/seed_v1.py` | One-off import of the old v1 history |
 | `config/alerts.json` | Your alert rules |
 | `data/` | Written by the job; don't edit by hand |
@@ -97,4 +105,4 @@ python tests/simulate.py         # offline test, touches nothing in data/
 python -m http.server            # then open http://localhost:8000
 ```
 
-Not affiliated with warframe.market or Digital Extremes.
+Warframe Price Tracker is a fan project. It is not affiliated with, endorsed by, or sponsored by Digital Extremes Ltd. or warframe.market. Warframe and all related names and logos are trademarks of Digital Extremes Ltd.

@@ -4,25 +4,34 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Prime Price Tracker (beta)</title>
-<meta name="description" content="Price trends for prime Warframes, weapons and their parts, snapshotted hourly from the warframe.market API.">
+<title>Warframe Price Tracker</title>
+<meta name="description" content="Unofficial fan-made price tracker for prime Warframes, weapons and parts, with 90-day history. Market data from warframe.market.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 30 16 16 30 2 16Z' fill='%23151A21' stroke='%23E0B354' stroke-width='2.5'/%3E%3Cpath d='M8 19l5-5 4 3 7-7' fill='none' stroke='%23E0B354' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <script src="assets/app.js" defer></script>
 </head>
 <body>
 <div class="wrap">
-  <header class="top">
-    <div class="titles">
-      <div class="eyebrow">
-        <span class="beta" title="Early version: numbers and layout may change">Beta</span>
-        <span id="meta">warframe.market · loading…</span>
-      </div>
-      <h1 id="heading">Prime Warframes</h1>
-    </div>
+  <header class="brand">
+    <a class="brand-home" href="./" aria-label="Warframe Price Tracker, home">
+      <svg class="brand-logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 30 16 16 30 2 16Z" fill="#151A21" stroke="#E0B354" stroke-width="2"/><path d="M8 19l5-5 4 3 7-7" fill="none" stroke="#E0B354" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="brand-name">Warframe Price Tracker</span>
+      <span class="beta" title="Early version: numbers and layout may change">Beta</span>
+    </a>
+    <p class="brand-source">Market data from <a href="https://warframe.market" rel="noopener">warframe.market</a><span class="dot" aria-hidden="true">·</span><span id="meta">loading…</span></p>
+  </header>
+
+  <section class="top">
+    <h1 id="heading">Prime Warframes</h1>
     <div class="controls">
+      <div class="picks" id="picks" role="group" aria-label="Lists">
+        <button type="button" class="pick-btn buy" data-group="buy" aria-pressed="false">Near lows</button>
+        <button type="button" class="pick-btn sell" data-group="sell" aria-pressed="false">Rising</button>
+        <button type="button" class="pick-btn owned" data-group="mine" aria-pressed="false">My items <span id="owned-count" class="pill">0</span></button>
+      </div>
       <label class="field">Sort
         <select id="sort">
           <option value="drop">Biggest drop first</option>
@@ -38,7 +47,7 @@
         <input id="search" type="search" placeholder="Search all items" autocomplete="off">
       </label>
     </div>
-  </header>
+  </section>
 
   <nav class="filters" aria-label="Item type">
     <div class="tabs" id="groups" role="group" aria-label="Category">
@@ -53,17 +62,43 @@
       <button type="button" data-kind="all" aria-pressed="false">Both</button>
     </div>
     <span id="count" class="count"></span>
+    <div class="layout" id="layout" role="group" aria-label="Layout">
+      <button type="button" data-layout="rows" aria-pressed="true">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12"/></svg>Rows</button>
+      <button type="button" data-layout="cards" aria-pressed="false">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="2" width="5" height="5"/><rect x="9" y="2" width="5" height="5"/><rect x="2" y="9" width="5" height="5"/><rect x="9" y="9" width="5" height="5"/></svg>Cards</button>
+    </div>
   </nav>
 
+  <div id="mine-bar" class="mine-bar" hidden>
+    <div class="tabs" id="mine-tabs" role="group" aria-label="My items">
+      <button type="button" data-group="owned" aria-pressed="false">Owned <span class="n" id="n-owned"></span></button>
+      <button type="button" data-group="watch" aria-pressed="false">Tracking <span class="n" id="n-watch"></span></button>
+    </div>
+    <div class="pf-actions">
+      <button type="button" class="pf-btn" id="export-btn" title="Download your owned and tracked lists as a file">Export</button>
+      <button type="button" class="pf-btn" id="import-btn" title="Load a file made with Export">Import</button>
+    </div>
+  </div>
+  <p id="pick-note" class="pick-note" hidden></p>
   <div id="notice" class="notice" hidden></div>
+  <section id="portfolio" class="portfolio" aria-label="Value of your owned items" hidden></section>
 
   <main id="grid" class="grid" aria-live="polite">
     <p class="empty">Loading prices…</p>
   </main>
 
   <footer class="foot">
-    <p>Dashed line on each chart is the 30-day average. Blue means the item is cheaper than usual, orange means pricier. Prices are the lowest sell listing, checked every hour.</p>
-    <p>Data from the <a href="https://warframe.market">warframe.market</a> public API. Not affiliated with warframe.market or Digital Extremes. <span id="version"></span></p>
+    <div class="foot-info">
+      <p>Charts cover the last 90 days; hover one to see the price on a given day. The dashed line is the 30-day average. Blue means cheaper than usual, orange means pricier. Prices are the lowest sell listing, checked every hour; days before 14 Oct 2026 are warframe.market's daily median sale price.</p>
+      <p><b>Vaulted</b> items' relics no longer drop, so they can only be traded for (or bought during Prime Resurgence). <b>Farmable</b> items' relics currently drop. Vault status comes from the community <a href="https://github.com/WFCD/warframe-items" rel="noopener">WFCD warframe-items</a> project and refreshes weekly.</p>
+      <p>Owned and tracked items are saved in this browser only. Use Export under My items to back them up or move them to another device. Tracking targets are checked against each hourly update while the page is open; the site can't notify you when it's closed.</p>
+    </div>
+    <div class="disclaimer">
+      <p class="disclaimer-title">Unofficial fan project</p>
+      <p>Warframe Price Tracker is a fan-made website. It is not affiliated with, endorsed by, or sponsored by Digital Extremes Ltd. or warframe.market. Warframe and all related names, logos and imagery are trademarks of Digital Extremes Ltd. Market data is read from the public <a href="https://warframe.market" rel="noopener">warframe.market</a> API. Prices are for information only.</p>
+      <p class="version"><span id="version"></span></p>
+    </div>
   </footer>
 </div>
 </body>

@@ -41,6 +41,17 @@ OTHER_ITEMS = [  # real catalogue entries that must NOT be picked up
 ]
 
 
+WFCD = {  # trimmed WFCD warframe-items entries: only the fields vault.py reads
+    "Warframes": [{"name": "Nova Prime", "vaulted": True}, {"name": "Mag Prime", "vaulted": False},
+                  {"name": "Zephyr Prime", "vaulted": True}, {"name": "Nova", "vaulted": None}],
+    "Secondary": [{"name": "Vasto Prime", "vaulted": True}],
+    "Melee": [{"name": "Nikana Prime", "vaulted": False}],
+}
+VAULTED = {"nova_prime_set": True, "mag_prime_set": False, "frost_prime_set": None, "hydroid_prime_set": None,
+           "zephyr_prime_chassis_blueprint": True, "vasto_prime_set": True, "nikana_prime_set": False,
+           "nikana_prime_blade": False}
+
+
 def order(kind, plat, qty=1):
     return {"id": "x", "type": kind, "platinum": plat, "quantity": qty, "perTrade": 1, "visible": True,
             "createdAt": "2026-10-07T02:23:06Z", "updatedAt": "2026-10-08T00:11:50Z", "itemId": "x",
@@ -57,6 +68,8 @@ def write_fixtures(folder: Path, prices: dict, catalogue_version: str):
     (folder / "v2_items.json").write_text(json.dumps({"apiVersion": "0.25.0", "data": items, "error": None}))
     (folder / "v2_versions.json").write_text(json.dumps({"apiVersion": "0.25.0",
                                                          "data": {"collections": {"items": catalogue_version}}}))
+    for category, entries in WFCD.items():  # vault status; Frost and Hydroid are deliberately missing
+        (folder / f"wfcd_{category}.json").write_text(json.dumps(entries))
     for slug, p in prices.items():
         if slug == "hydroid_prime_set" and p is None:  # simulate an outage for one set
             continue
@@ -103,11 +116,12 @@ def main():
     assert sorted(slugs) == sorted(SETS), f"wrong items picked: {slugs}"
     for s in latest["sets"]:
         assert f"{s['group']}/{s['kind']}" == SETS[s["slug"]][4], s
+        assert s["vaulted"] == VAULTED[s["slug"]], (s["slug"], s["vaulted"])
     nova = next(s for s in latest["sets"] if s["slug"] == "nova_prime_set")
     assert nova["sell"] == price["nova_prime_set"], nova
     assert nova["buy"] == price["nova_prime_set"] - 5, nova
     assert nova["avg30"] is not None and nova["change_pct"] is not None, nova
-    assert len(nova["spark"]) == 30 and sum(v is not None for v in nova["spark"]) == 14, nova["spark"]
+    assert len(nova["spark"]) == 90 and sum(v is not None for v in nova["spark"]) == 14, nova["spark"]
     rows = (data / "history" / "2026-10.csv").read_text().strip().splitlines()
     expected = runs * len(SETS) - 2  # hydroid's two missing runs
     assert len(rows) - 1 == expected, f"expected {expected} rows, got {len(rows) - 1}"

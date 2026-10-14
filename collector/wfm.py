@@ -15,7 +15,7 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
-VERSION = "0.2.0-beta"
+VERSION = "0.5.0-beta"
 API = "https://api.warframe.market"
 REQUEST_GAP = 0.4  # seconds between requests: about 2.5 per second
 RETRIES = 3
@@ -26,7 +26,7 @@ _last_request = 0.0
 def user_agent() -> str:
     repo = os.environ.get("GITHUB_REPOSITORY")
     contact = f"+https://github.com/{repo}" if repo else "local run"
-    return f"prime-set-tracker/{VERSION} ({contact})"
+    return f"warframe-price-tracker/{VERSION} ({contact})"
 
 
 def _fixture(path: str):
