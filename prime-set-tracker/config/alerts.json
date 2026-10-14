@@ -1,0 +1,5 @@
+{
+ "alerts": [
+  {"slug": "nova_prime_set", "when": "below", "price": 65}
+ ]
+}

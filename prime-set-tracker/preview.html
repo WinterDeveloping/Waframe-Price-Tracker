@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Prime Set Tracker (beta)</title>
+<meta name="description" content="Price trends for prime Warframe sets, snapshotted hourly from the warframe.market API.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>:root {
+  --ground: #0D1015;
+  --panel: #151A21;
+  --panel-2: #1E252E;
+  --line: #232A33;
+  --line-2: #2B333D;
+  --text: #E8E6E1;
+  --text-strong: #F4F1EA;
+  --muted: #9AA3AE;
+  --gold: #E0B354;
+  --gold-soft: #F2CD7A;
+  --down: #62A8E8;
+  --down-text: #8CC2F2;
+  --down-bg: #13283D;
+  --up: #F08A4B;
+  --up-text: #F5A673;
+  --up-bg: #3A2414;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --font-display: "Rajdhani", "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--ground); color: var(--text); font-family: var(--font-body); font-size: 15px; line-height: 1.45; }
+a { color: var(--gold); }
+a:hover { color: var(--gold-soft); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.wrap { max-width: 1280px; margin: 0 auto; padding: 40px 16px 64px; display: flex; flex-direction: column; gap: 28px; }
+
+.top { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; }
+.titles { display: flex; flex-direction: column; gap: 6px; }
+.eyebrow { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.beta { padding: 3px 8px; border-radius: 4px; border: 1px solid var(--gold); color: var(--gold-soft); letter-spacing: 0.12em; }
+h1 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: clamp(32px, 6vw, 44px); letter-spacing: 0.02em; color: var(--text-strong); }
+
+.controls { display: flex; flex-wrap: wrap; gap: 8px; }
+.field { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--muted); }
+select, .search { height: 44px; border-radius: 8px; border: 1px solid var(--line-2); background: var(--panel); color: var(--text); font: inherit; }
+select { padding: 0 12px; }
+.search { display: flex; align-items: center; gap: 10px; padding: 0 14px; color: var(--muted); }
+.search input { width: 160px; border: 0; background: transparent; color: var(--text); font: inherit; }
+.search:focus-within, select:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.search input:focus { outline: none; }
+
+.notice { padding: 14px 16px; border-radius: 10px; background: #13202D; border: 1px solid #23415E; color: #C9DDF0; font-size: 14px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.empty { grid-column: 1 / -1; color: var(--muted); }
+
+.card { display: flex; flex-direction: column; gap: 14px; padding: 20px; border-radius: 14px; background: var(--panel); border: 1px solid var(--line); color: var(--text); text-decoration: none; transition: border-color 120ms ease; }
+.card:hover { color: var(--text); border-color: var(--line-2); }
+.card:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.card.deal { border-color: #2F5A82; }
+.card-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.card-name { font-family: var(--font-display); font-weight: 700; font-size: 22px; letter-spacing: 0.02em; color: var(--text-strong); }
+.badge { padding: 4px 10px; border-radius: 6px; font-family: var(--font-mono); font-size: 13px; white-space: nowrap; background: var(--panel-2); color: #C9CED4; }
+.badge.down { background: var(--down-bg); color: var(--down-text); }
+.badge.up { background: var(--up-bg); color: var(--up-text); }
+.price { display: flex; align-items: baseline; gap: 8px; }
+.price-num { font-family: var(--font-mono); font-size: 36px; font-weight: 500; color: var(--text-strong); }
+.price-label { font-size: 14px; color: var(--muted); }
+.chart { width: 100%; height: 64px; display: block; }
+.chart-empty { height: 64px; display: flex; align-items: center; justify-content: center; border-radius: 8px; background: var(--ground); color: var(--muted); font-size: 13px; text-align: center; padding: 0 12px; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); }
+.stats div { display: flex; flex-direction: column; gap: 2px; }
+.stats b { font-family: var(--font-mono); font-size: 14px; font-weight: 400; color: var(--text); }
+
+.foot { display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: var(--muted); }
+.foot p { margin: 0; }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="titles">
+      <div class="eyebrow">
+        <span class="beta" title="Early version: numbers and layout may change">Beta</span>
+        <span id="meta">warframe.market · loading…</span>
+      </div>
+      <h1>Prime Warframe sets</h1>
+    </div>
+    <div class="controls">
+      <label class="field">Sort
+        <select id="sort">
+          <option value="drop">Biggest drop first</option>
+          <option value="rise">Biggest rise first</option>
+          <option value="name">Name</option>
+          <option value="price-low">Cheapest first</option>
+          <option value="price-high">Priciest first</option>
+        </select>
+      </label>
+      <label class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <span class="sr-only">Search sets</span>
+        <input id="search" type="search" placeholder="Search sets" autocomplete="off">
+      </label>
+    </div>
+  </header>
+
+  <div class="notice">Preview with simulated prices from the offline test, not real market data.</div><div id="notice" class="notice" hidden></div>
+
+  <main id="grid" class="grid" aria-live="polite">
+    <p class="empty">Loading prices…</p>
+  </main>
+
+  <footer class="foot">
+    <p>Dashed line on each chart is the 30-day average. Blue means the set is cheaper than usual, orange means pricier. Prices are the lowest sell listing, checked every hour.</p>
+    <p>Data from the <a href="https://warframe.market">warframe.market</a> public API. Not affiliated with warframe.market or Digital Extremes. <span id="version"></span></p>
+  </footer>
+</div>
+<script>window.PST_DATA = {
+ "version": "0.1.0-beta",
+ "platform": "pc",
+ "generated": "2026-10-14T21:00:00Z",
+ "snapshot": "2026-10-14T21:00:00Z",
+ "spark_start": "2026-09-15",
+ "sets": [
+  {
+   "slug": "frost_prime_set",
+   "name": "Frost Prime Set",
+   "ducats": 175,
+   "sell": 47.0,
+   "buy": 42.0,
+   "avg7": 48.1,
+   "avg30": 46.8,
+   "change_pct": 0.4,
+   "spark": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    45.0,
+    45.0,
+    45.5,
+    46.0,
+    44.0,
+    46.0,
+    47.0,
+    48.0,
+    47.5,
+    50.0,
+    48.0,
+    47.0,
+    49.0,
+    47.0
+   ],
+   "tracked_since": "2026-10-01"
+  },
+  {
+   "slug": "hydroid_prime_set",
+   "name": "Hydroid Prime Set",
+   "ducats": 205,
+   "sell": 62.0,
+   "buy": 57.0,
+   "avg7": 60.4,
+   "avg30": 56.9,
+   "change_pct": 9.0,
+   "spark": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    52.0,
+    51.0,
+    52.5,
+    54.0,
+    52.0,
+    54.0,
+    58.5,
+    59.0,
+    59.0,
+    60.0,
+    60.0,
+    62.0,
+    61.0,
+    62.0
+   ],
+   "tracked_since": "2026-10-01"
+  },
+  {
+   "slug": "mag_prime_set",
+   "name": "Mag Prime Set",
+   "ducats": null,
+   "sell": 84.0,
+   "buy": 79.0,
+   "avg7": 81.3,
+   "avg30": 77.1,
+   "change_pct": 8.9,
+   "spark": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    73.0,
+    72.0,
+    73.0,
+    75.0,
+    72.5,
+    73.0,
+    72.5,
+    75.0,
+    77.5,
+    80.5,
+    83.5,
+    84.0,
+    83.5,
+    85.0
+   ],
+   "tracked_since": "2026-10-01"
+  },
+  {
+   "slug": "nova_prime_set",
+   "name": "Nova Prime Set",
+   "ducats": null,
+   "sell": 47.0,
+   "buy": 42.0,
+   "avg7": 55.4,
+   "avg30": 62.1,
+   "change_pct": -24.3,
+   "spark": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    73.0,
+    71.0,
+    70.5,
+    68.0,
+    67.0,
+    66.0,
+    66.0,
+    63.5,
+    61.0,
+    59.0,
+    57.0,
+    51.0,
+    49.5,
+    47.0
+   ],
+   "tracked_since": "2026-10-01"
+  }
+ ]
+}
+;</script><script>// Prime Set Tracker (beta): renders data/latest.json as a wall of cards.
+(() => {
+  "use strict";
+
+  const STALE_HOURS = 3;
+  const SVG = "http://www.w3.org/2000/svg";
+  const grid = document.getElementById("grid");
+  const meta = document.getElementById("meta");
+  const notice = document.getElementById("notice");
+  const sortSel = document.getElementById("sort");
+  const search = document.getElementById("search");
+  let sets = [];
+
+  const el = (tag, cls, text) => {
+    const n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  };
+  const svg = (tag, attrs) => {
+    const n = document.createElementNS(SVG, tag);
+    for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
+    return n;
+  };
+  const plat = (v) => (v == null ? "–" : `${Math.round(v * 10) / 10}p`);
+  const shortName = (name) => name.replace(/ Set$/, "");
+
+  function ago(iso) {
+    const mins = Math.round((Date.now() - new Date(iso).getTime()) / 60000);
+    if (mins < 1) return "just now";
+    if (mins < 60) return `${mins} min ago`;
+    const h = Math.round(mins / 60);
+    return h < 48 ? `${h} h ago` : `${Math.round(h / 24)} days ago`;
+  }
+
+  function sparkline(item) {
+    const pts = item.spark.map((v, i) => [i, v]).filter(([, v]) => v != null);
+    if (pts.length < 2) {
+      const since = item.tracked_since ? ` since ${item.tracked_since}` : "";
+      return el("div", "chart-empty", `Collecting history${since}`);
+    }
+    const W = 240, H = 64, n = item.spark.length - 1;
+    const values = pts.map(([, v]) => v).concat(item.avg30 != null ? [item.avg30] : []);
+    const min = Math.min(...values), max = Math.max(...values), span = max - min || 1;
+    const x = (i) => (i / n) * W;
+    const y = (v) => H - 6 - ((v - min) / span) * (H - 14);
+
+    // Break the line where days are missing instead of drawing across gaps.
+    let d = "", area = "", prev = -2, segStart = null;
+    const closeArea = (lastI) => { if (segStart != null) area += `L${x(lastI).toFixed(1)},${H}L${x(segStart).toFixed(1)},${H}Z`; };
+    for (const [i, v] of pts) {
+      const p = `${x(i).toFixed(1)},${y(v).toFixed(1)}`;
+      if (i !== prev + 1) { closeArea(prev); d += `M${p}`; area += `M${p}`; segStart = i; }
+      else { d += `L${p}`; area += `L${p}`; }
+      prev = i;
+    }
+    closeArea(prev);
+
+    const dir = item.change_pct == null ? "flat" : item.change_pct < -0.5 ? "down" : item.change_pct > 0.5 ? "up" : "flat";
+    const stroke = { down: "#62A8E8", up: "#F08A4B", flat: "#9AA3AE" }[dir];
+    const fill = { down: "rgba(98,168,232,0.14)", up: "rgba(240,138,75,0.12)", flat: "rgba(154,163,174,0.10)" }[dir];
+    const label = `${item.name}, ${pts.length} days of prices` +
+      (item.avg30 != null ? `, 30-day average ${plat(item.avg30)}` : "");
+
+    const s = svg("svg", { class: "chart", viewBox: `0 0 ${W} ${H}`, preserveAspectRatio: "none", role: "img", "aria-label": label });
+    s.appendChild(svg("path", { d: area, fill }));
+    if (item.avg30 != null) {
+      const ay = y(item.avg30).toFixed(1);
+      s.appendChild(svg("line", { x1: 0, x2: W, y1: ay, y2: ay, stroke: "#4A535E", "stroke-width": 1, "stroke-dasharray": "4 4", "vector-effect": "non-scaling-stroke" }));
+    }
+    s.appendChild(svg("path", { d, fill: "none", stroke, "stroke-width": 2, "stroke-linejoin": "round", "vector-effect": "non-scaling-stroke" }));
+    return s;
+  }
+
+  function card(item) {
+    const a = el("a", "card");
+    a.href = `https://warframe.market/items/${encodeURIComponent(item.slug)}`;
+    a.target = "_blank";
+    a.rel = "noopener";
+    if (item.change_pct != null && item.change_pct < -4) a.classList.add("deal");
+
+    const head = el("div", "card-head");
+    head.appendChild(el("div", "card-name", shortName(item.name)));
+    let badge;
+    if (item.change_pct == null) badge = el("span", "badge", "New");
+    else {
+      const p = item.change_pct;
+      const dir = p < -0.5 ? "down" : p > 0.5 ? "up" : "";
+      badge = el("span", `badge ${dir}`.trim(), `${p > 0 ? "+" : p < 0 ? "−" : ""}${Math.abs(p).toFixed(1)}%`);
+      badge.title = "Lowest sell vs 30-day average";
+    }
+    head.appendChild(badge);
+
+    const price = el("div", "price");
+    price.appendChild(el("span", "price-num", item.sell == null ? "–" : String(Math.round(item.sell))));
+    price.appendChild(el("span", "price-label", item.sell == null ? "no sellers right now" : "plat lowest sell"));
+
+    const stats = el("div", "stats");
+    for (const [label, value] of [["30d avg", plat(item.avg30)], ["7d avg", plat(item.avg7)], ["Top buy", plat(item.buy)]]) {
+      const d = el("div", null, label);
+      d.appendChild(el("b", null, value));
+      stats.appendChild(d);
+    }
+
+    a.append(head, price, sparkline(item), stats);
+    return a;
+  }
+
+  const sorters = {
+    drop: (a, b) => (a.change_pct ?? Infinity) - (b.change_pct ?? Infinity),
+    rise: (a, b) => (b.change_pct ?? -Infinity) - (a.change_pct ?? -Infinity),
+    name: (a, b) => a.name.localeCompare(b.name),
+    "price-low": (a, b) => (a.sell ?? Infinity) - (b.sell ?? Infinity),
+    "price-high": (a, b) => (b.sell ?? -Infinity) - (a.sell ?? -Infinity),
+  };
+
+  function render() {
+    const q = search.value.trim().toLowerCase();
+    const list = sets.filter((s) => s.name.toLowerCase().includes(q)).sort(sorters[sortSel.value] || sorters.name);
+    grid.replaceChildren(...(list.length ? list.map(card) : [el("p", "empty", "No sets match your search.")]));
+  }
+
+  async function load() {
+    try {
+      const res = { ok: true, json: async () => window.PST_DATA };
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      sets = data.sets || [];
+      document.getElementById("version").textContent = `v${data.version}`;
+      meta.textContent = data.snapshot
+        ? `warframe.market · ${data.platform.toUpperCase()} · updated ${ago(data.snapshot)}`
+        : `warframe.market · ${data.platform.toUpperCase()} · no snapshot yet`;
+      if (data.snapshot) meta.title = new Date(data.snapshot).toLocaleString();
+      const hoursOld = data.snapshot ? (Date.now() - new Date(data.snapshot).getTime()) / 3.6e6 : null;
+      if (hoursOld != null && hoursOld > STALE_HOURS) {
+        notice.textContent = `The last price check was ${ago(data.snapshot)}. The hourly job may be delayed or failing; check the Actions tab on GitHub.`;
+        notice.hidden = false;
+      }
+      render();
+    } catch (err) {
+      grid.replaceChildren(el("p", "empty", "Couldn't load prices yet. If the tracker was just set up, wait for the first hourly run."));
+      meta.textContent = "warframe.market · no data";
+      console.error(err);
+    }
+  }
+
+  sortSel.addEventListener("change", render);
+  search.addEventListener("input", render);
+  load();
+})();
+</script></body>
+</html>
