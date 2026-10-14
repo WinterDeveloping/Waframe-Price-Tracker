@@ -1,0 +1,261 @@
+{
+ "fetched": "2026-10-14T11:37:21Z",
+ "versions": "{\"apps\": {\"android\": \"0.0.1\", \"ios\": \"0.0.1\", \"minAndroid\": \"\", \"minIos\": \"\"}, \"collections\": {\"items\": \"MjAyNi0xMC0xM1QwOTozNTo1NQ==\", \"liches\": \"MjAyNi0wOS0yN1QyMDoxNDo0OA==\", \"locations\": \"MjAyNi0wOS0yM1QxNjowMjowMA==\", \"missions\": \"MjAyNi0xMC0wOFQwMDo0MToxMw==\", \"npcs\": \"MjAyNi0wNy0xMVQxNTo0NzoxMg==\", \"rivens\": \"MjAyNi0xMC0wOFQwMDowNzozMQ==\", \"sisters\": \"MjAyNi0wOS0yN1QyMDoxNDo0OA==\"}, \"id\": \"6acdfb7b94ce7be7f4de8e19\", \"updatedAt\": \"2026-10-13T09:35:55Z\"}",
+ "sets": [
+  {
+   "slug": "ash_prime_set",
+   "name": "Ash Prime Set",
+   "ducats": 170
+  },
+  {
+   "slug": "atlas_prime_set",
+   "name": "Atlas Prime Set",
+   "ducats": 205
+  },
+  {
+   "slug": "banshee_prime_set",
+   "name": "Banshee Prime Set",
+   "ducats": 225
+  },
+  {
+   "slug": "baruuk_prime_set",
+   "name": "Baruuk Prime Set",
+   "ducats": 225
+  },
+  {
+   "slug": "caliban_prime_set",
+   "name": "Caliban Prime Set",
+   "ducats": 260
+  },
+  {
+   "slug": "chroma_prime_set",
+   "name": "Chroma Prime Set",
+   "ducats": 205
+  },
+  {
+   "slug": "citrine_prime_set",
+   "name": "Citrine Prime Set",
+   "ducats": 260
+  },
+  {
+   "slug": "ember_prime_set",
+   "name": "Ember Prime Set",
+   "ducats": 175
+  },
+  {
+   "slug": "equinox_prime_set",
+   "name": "Equinox Prime Set",
+   "ducats": 205
+  },
+  {
+   "slug": "frost_prime_set",
+   "name": "Frost Prime Set",
+   "ducats": 175
+  },
+  {
+   "slug": "gara_prime_set",
+   "name": "Gara Prime Set",
+   "ducats": 205
+  },
+  {
+   "slug": "garuda_prime_set",
+   "name": "Garuda Prime Set",
+   "ducats": 225
+  },
+  {
+   "slug": "gauss_prime_set",
+   "name": "Gauss Prime Set",
+   "ducats": 185
+  },
+  {
+   "slug": "grendel_prime_set",
+   "name": "Grendel Prime Set",
+   "ducats": 225
+  },
+  {
+   "slug": "gyre_prime_set",
+   "name": "Gyre Prime Set",
+   "ducats": 205
+  },
+  {
+   "slug": "harrow_prime_set",
+   "name": "Harrow Prime Set",
+   "ducats": 205
+  },
+  {
+   "slug": "hildryn_prime_set",
+   "name": "Hildryn Prime Set",
+   "ducats": 205
+  },
+  {
+   "slug": "hydroid_prime_set",
+   "name": "Hydroid Prime Set",
+   "ducats": 205
+  },
+  {
+   "slug": "inaros_prime_set",
+   "name": "Inaros Prime Set",
+   "ducats": 205
+  },
+  {
+   "slug": "ivara_prime_set",
+   "name": "Ivara Prime Set",
+   "ducats": 205
+  },
+  {
+   "slug": "khora_prime_set",
+   "name": "Khora Prime Set",
+   "ducats": 225
+  },
+  {
+   "slug": "lavos_prime_set",
+   "name": "Lavos Prime Set",
+   "ducats": 205
+  },
+  {
+   "slug": "limbo_prime_set",
+   "name": "Limbo Prime Set",
+   "ducats": 260
+  },
+  {
+   "slug": "loki_prime_set",
+   "name": "Loki Prime Set",
+   "ducats": 175
+  },
+  {
+   "slug": "mag_prime_set",
+   "name": "Mag Prime Set",
+   "ducats": 175
+  },
+  {
+   "slug": "mesa_prime_set",
+   "name": "Mesa Prime Set",
+   "ducats": 260
+  },
+  {
+   "slug": "mirage_prime_set",
+   "name": "Mirage Prime Set",
+   "ducats": 175
+  },
+  {
+   "slug": "nekros_prime_set",
+   "name": "Nekros Prime Set",
+   "ducats": 225
+  },
+  {
+   "slug": "nezha_prime_set",
+   "name": "Nezha Prime Set",
+   "ducats": 260
+  },
+  {
+   "slug": "nidus_prime_set",
+   "name": "Nidus Prime Set",
+   "ducats": 225
+  },
+  {
+   "slug": "nova_prime_set",
+   "name": "Nova Prime Set",
+   "ducats": 175
+  },
+  {
+   "slug": "nyx_prime_set",
+   "name": "Nyx Prime Set",
+   "ducats": 225
+  },
+  {
+   "slug": "oberon_prime_set",
+   "name": "Oberon Prime Set",
+   "ducats": 225
+  },
+  {
+   "slug": "octavia_prime_set",
+   "name": "Octavia Prime Set",
+   "ducats": 175
+  },
+  {
+   "slug": "protea_prime_set",
+   "name": "Protea Prime Set",
+   "ducats": 260
+  },
+  {
+   "slug": "revenant_prime_set",
+   "name": "Revenant Prime Set",
+   "ducats": 205
+  },
+  {
+   "slug": "rhino_prime_set",
+   "name": "Rhino Prime Set",
+   "ducats": 225
+  },
+  {
+   "slug": "saryn_prime_set",
+   "name": "Saryn Prime Set",
+   "ducats": 225
+  },
+  {
+   "slug": "sevagoth_prime_set",
+   "name": "Sevagoth Prime Set",
+   "ducats": 175
+  },
+  {
+   "slug": "styanax_prime_set",
+   "name": "Styanax Prime Set",
+   "ducats": 205
+  },
+  {
+   "slug": "titania_prime_set",
+   "name": "Titania Prime Set",
+   "ducats": 205
+  },
+  {
+   "slug": "trinity_prime_set",
+   "name": "Trinity Prime Set",
+   "ducats": 130
+  },
+  {
+   "slug": "valkyr_prime_set",
+   "name": "Valkyr Prime Set",
+   "ducats": 225
+  },
+  {
+   "slug": "vauban_prime_set",
+   "name": "Vauban Prime Set",
+   "ducats": 290
+  },
+  {
+   "slug": "volt_prime_set",
+   "name": "Volt Prime Set",
+   "ducats": 180
+  },
+  {
+   "slug": "voruna_prime_set",
+   "name": "Voruna Prime Set",
+   "ducats": 290
+  },
+  {
+   "slug": "wisp_prime_set",
+   "name": "Wisp Prime Set",
+   "ducats": 225
+  },
+  {
+   "slug": "wukong_prime_set",
+   "name": "Wukong Prime Set",
+   "ducats": 205
+  },
+  {
+   "slug": "xaku_prime_set",
+   "name": "Xaku Prime Set",
+   "ducats": 205
+  },
+  {
+   "slug": "yareli_prime_set",
+   "name": "Yareli Prime Set",
+   "ducats": 260
+  },
+  {
+   "slug": "zephyr_prime_set",
+   "name": "Zephyr Prime Set",
+   "ducats": 205
+  }
+ ]
+}
