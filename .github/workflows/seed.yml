@@ -1,0 +1,42 @@
+name: Seed history (run once)
+
+# Copies the old 90-day sale history from the deprecated v1 API so the
+# charts don't start empty. Run it by hand after the first "Collect prices" run.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  seed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Copy v1 history
+        env:
+          WFM_PLATFORM: ${{ vars.WFM_PLATFORM || 'pc' }}
+        run: python collector/seed_v1.py
+
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "no changes"
+            exit 0
+          fi
+          git commit -m "data: seed history from v1 statistics"
+          git pull --rebase
+          git push
