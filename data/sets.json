@@ -1,261 +1,4963 @@
 {
- "fetched": "2026-10-14T11:37:21Z",
+ "fetched": "2026-10-14T11:51:56Z",
  "versions": "{\"apps\": {\"android\": \"0.0.1\", \"ios\": \"0.0.1\", \"minAndroid\": \"\", \"minIos\": \"\"}, \"collections\": {\"items\": \"MjAyNi0xMC0xM1QwOTozNTo1NQ==\", \"liches\": \"MjAyNi0wOS0yN1QyMDoxNDo0OA==\", \"locations\": \"MjAyNi0wOS0yM1QxNjowMjowMA==\", \"missions\": \"MjAyNi0xMC0wOFQwMDo0MToxMw==\", \"npcs\": \"MjAyNi0wNy0xMVQxNTo0NzoxMg==\", \"rivens\": \"MjAyNi0xMC0wOFQwMDowNzozMQ==\", \"sisters\": \"MjAyNi0wOS0yN1QyMDoxNDo0OA==\"}, \"id\": \"6acdfb7b94ce7be7f4de8e19\", \"updatedAt\": \"2026-10-13T09:35:55Z\"}",
+ "scope": 2,
  "sets": [
+  {
+   "slug": "acceltra_prime_barrel",
+   "name": "Acceltra Prime Barrel",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "acceltra_prime_blueprint",
+   "name": "Acceltra Prime Blueprint",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "acceltra_prime_receiver",
+   "name": "Acceltra Prime Receiver",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "acceltra_prime_set",
+   "name": "Acceltra Prime Set",
+   "ducats": 225,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "acceltra_prime_stock",
+   "name": "Acceltra Prime Stock",
+   "ducats": 65,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "afentis_prime_barrel",
+   "name": "Afentis Prime Barrel",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "afentis_prime_blade",
+   "name": "Afentis Prime Blade",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "afentis_prime_blueprint",
+   "name": "Afentis Prime Blueprint",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "afentis_prime_handle",
+   "name": "Afentis Prime Handle",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "afentis_prime_set",
+   "name": "Afentis Prime Set",
+   "ducats": 260,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "afuris_prime_barrel",
+   "name": "Afuris Prime Barrel",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "afuris_prime_blueprint",
+   "name": "Afuris Prime Blueprint",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "afuris_prime_link",
+   "name": "Afuris Prime Link",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "afuris_prime_receiver",
+   "name": "Afuris Prime Receiver",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "afuris_prime_set",
+   "name": "Afuris Prime Set",
+   "ducats": 290,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "akarius_prime_barrel",
+   "name": "Akarius Prime Barrel",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "akarius_prime_blueprint",
+   "name": "Akarius Prime Blueprint",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "akarius_prime_link",
+   "name": "Akarius Prime Link",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "akarius_prime_receiver",
+   "name": "Akarius Prime Receiver",
+   "ducats": 65,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "akarius_prime_set",
+   "name": "Akarius Prime Set",
+   "ducats": 305,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "akbolto_prime_barrel",
+   "name": "Akbolto Prime Barrel",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "akbolto_prime_blueprint",
+   "name": "Akbolto Prime Blueprint",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "akbolto_prime_link",
+   "name": "Akbolto Prime Link",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "akbolto_prime_receiver",
+   "name": "Akbolto Prime Receiver",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "akbolto_prime_set",
+   "name": "Akbolto Prime Set",
+   "ducats": 350,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "akbronco_prime_blueprint",
+   "name": "Akbronco Prime Blueprint",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "akbronco_prime_link",
+   "name": "Akbronco Prime Link",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "akbronco_prime_set",
+   "name": "Akbronco Prime Set",
+   "ducats": 60,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "akjagara_prime_barrel",
+   "name": "Akjagara Prime Barrel",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "akjagara_prime_blueprint",
+   "name": "Akjagara Prime Blueprint",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "akjagara_prime_link",
+   "name": "Akjagara Prime Link",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "akjagara_prime_receiver",
+   "name": "Akjagara Prime Receiver",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "akjagara_prime_set",
+   "name": "Akjagara Prime Set",
+   "ducats": 350,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "aklex_prime_blueprint",
+   "name": "Aklex Prime Blueprint",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "aklex_prime_link",
+   "name": "Aklex Prime Link",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "aklex_prime_set",
+   "name": "Aklex Prime Set",
+   "ducats": 145,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "akmagnus_prime_blueprint",
+   "name": "Akmagnus Prime Blueprint",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "akmagnus_prime_link",
+   "name": "Akmagnus Prime Link",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "akmagnus_prime_set",
+   "name": "Akmagnus Prime Set",
+   "ducats": 60,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "aksomati_prime_barrel",
+   "name": "Aksomati Prime Barrel",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "aksomati_prime_blueprint",
+   "name": "Aksomati Prime Blueprint",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "aksomati_prime_link",
+   "name": "Aksomati Prime Link",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "aksomati_prime_receiver",
+   "name": "Aksomati Prime Receiver",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "aksomati_prime_set",
+   "name": "Aksomati Prime Set",
+   "ducats": 235,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "akstiletto_prime_barrel",
+   "name": "Akstiletto Prime Barrel",
+   "ducats": 25,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "akstiletto_prime_blueprint",
+   "name": "Akstiletto Prime Blueprint",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "akstiletto_prime_link",
+   "name": "Akstiletto Prime Link",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "akstiletto_prime_receiver",
+   "name": "Akstiletto Prime Receiver",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "akstiletto_prime_set",
+   "name": "Akstiletto Prime Set",
+   "ducats": 285,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "akvasto_prime_blueprint",
+   "name": "Akvasto Prime Blueprint",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "akvasto_prime_link",
+   "name": "Akvasto Prime Link",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "akvasto_prime_set",
+   "name": "Akvasto Prime Set",
+   "ducats": 145,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "alternox_prime_barrel",
+   "name": "Alternox Prime Barrel",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "alternox_prime_blueprint",
+   "name": "Alternox Prime Blueprint",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "alternox_prime_receiver",
+   "name": "Alternox Prime Receiver",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "alternox_prime_set",
+   "name": "Alternox Prime Set",
+   "ducats": 260,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "alternox_prime_stock",
+   "name": "Alternox Prime Stock",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "ankyros_prime_blade",
+   "name": "Ankyros Prime Blade",
+   "ducats": 65,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "ankyros_prime_blueprint",
+   "name": "Ankyros Prime Blueprint",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "ankyros_prime_gauntlet",
+   "name": "Ankyros Prime Gauntlet",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "ankyros_prime_set",
+   "name": "Ankyros Prime Set",
+   "ducats": 175,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "ash_prime_blueprint",
+   "name": "Ash Prime Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "ash_prime_chassis_blueprint",
+   "name": "Ash Prime Chassis Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "ash_prime_neuroptics_blueprint",
+   "name": "Ash Prime Neuroptics Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
   {
    "slug": "ash_prime_set",
    "name": "Ash Prime Set",
-   "ducats": 170
+   "ducats": 170,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "ash_prime_systems_blueprint",
+   "name": "Ash Prime Systems Blueprint",
+   "ducats": 65,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "astilla_prime_barrel",
+   "name": "Astilla Prime Barrel",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "astilla_prime_blueprint",
+   "name": "Astilla Prime Blueprint",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "astilla_prime_receiver",
+   "name": "Astilla Prime Receiver",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "astilla_prime_set",
+   "name": "Astilla Prime Set",
+   "ducats": 205,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "astilla_prime_stock",
+   "name": "Astilla Prime Stock",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "athodai_prime_barrel",
+   "name": "Athodai Prime Barrel",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "athodai_prime_blueprint",
+   "name": "Athodai Prime Blueprint",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "athodai_prime_receiver",
+   "name": "Athodai Prime Receiver",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "athodai_prime_set",
+   "name": "Athodai Prime Set",
+   "ducats": 160,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "atlas_prime_blueprint",
+   "name": "Atlas Prime Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "atlas_prime_chassis_blueprint",
+   "name": "Atlas Prime Chassis Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "atlas_prime_neuroptics_blueprint",
+   "name": "Atlas Prime Neuroptics Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "atlas_prime_set",
    "name": "Atlas Prime Set",
-   "ducats": 205
+   "ducats": 205,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "atlas_prime_systems_blueprint",
+   "name": "Atlas Prime Systems Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "ballistica_prime_blueprint",
+   "name": "Ballistica Prime Blueprint",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "ballistica_prime_lower_limb",
+   "name": "Ballistica Prime Lower Limb",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "ballistica_prime_receiver",
+   "name": "Ballistica Prime Receiver",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "ballistica_prime_set",
+   "name": "Ballistica Prime Set",
+   "ducats": 250,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "ballistica_prime_string",
+   "name": "Ballistica Prime String",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "ballistica_prime_upper_limb",
+   "name": "Ballistica Prime Upper Limb",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "banshee_prime_blueprint",
+   "name": "Banshee Prime Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "banshee_prime_chassis_blueprint",
+   "name": "Banshee Prime Chassis Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "banshee_prime_neuroptics_blueprint",
+   "name": "Banshee Prime Neuroptics Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "banshee_prime_set",
    "name": "Banshee Prime Set",
-   "ducats": 225
+   "ducats": 225,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "banshee_prime_systems_blueprint",
+   "name": "Banshee Prime Systems Blueprint",
+   "ducats": 65,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "baruuk_prime_blueprint",
+   "name": "Baruuk Prime Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "baruuk_prime_chassis_blueprint",
+   "name": "Baruuk Prime Chassis Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "baruuk_prime_neuroptics_blueprint",
+   "name": "Baruuk Prime Neuroptics Blueprint",
+   "ducats": 65,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "baruuk_prime_set",
    "name": "Baruuk Prime Set",
-   "ducats": 225
+   "ducats": 225,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "baruuk_prime_systems_blueprint",
+   "name": "Baruuk Prime Systems Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "baza_prime_barrel",
+   "name": "Baza Prime Barrel",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "baza_prime_blueprint",
+   "name": "Baza Prime Blueprint",
+   "ducats": 65,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "baza_prime_receiver",
+   "name": "Baza Prime Receiver",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "baza_prime_set",
+   "name": "Baza Prime Set",
+   "ducats": 225,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "baza_prime_stock",
+   "name": "Baza Prime Stock",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "bo_prime_blueprint",
+   "name": "Bo Prime Blueprint",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "bo_prime_handle",
+   "name": "Bo Prime Handle",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "bo_prime_ornament",
+   "name": "Bo Prime Ornament",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "bo_prime_set",
+   "name": "Bo Prime Set",
+   "ducats": 90,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "boar_prime_barrel",
+   "name": "Boar Prime Barrel",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "boar_prime_blueprint",
+   "name": "Boar Prime Blueprint",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "boar_prime_receiver",
+   "name": "Boar Prime Receiver",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "boar_prime_set",
+   "name": "Boar Prime Set",
+   "ducats": 175,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "boar_prime_stock",
+   "name": "Boar Prime Stock",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "boltor_prime_barrel",
+   "name": "Boltor Prime Barrel",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "boltor_prime_blueprint",
+   "name": "Boltor Prime Blueprint",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "boltor_prime_receiver",
+   "name": "Boltor Prime Receiver",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "boltor_prime_set",
+   "name": "Boltor Prime Set",
+   "ducats": 175,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "boltor_prime_stock",
+   "name": "Boltor Prime Stock",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "braton_prime_barrel",
+   "name": "Braton Prime Barrel",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "braton_prime_blueprint",
+   "name": "Braton Prime Blueprint",
+   "ducats": 25,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "braton_prime_receiver",
+   "name": "Braton Prime Receiver",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "braton_prime_set",
+   "name": "Braton Prime Set",
+   "ducats": 110,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "braton_prime_stock",
+   "name": "Braton Prime Stock",
+   "ducats": 25,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "bronco_prime_barrel",
+   "name": "Bronco Prime Barrel",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "bronco_prime_blueprint",
+   "name": "Bronco Prime Blueprint",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "bronco_prime_receiver",
+   "name": "Bronco Prime Receiver",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "bronco_prime_set",
+   "name": "Bronco Prime Set",
+   "ducats": 75,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "burston_prime_barrel",
+   "name": "Burston Prime Barrel",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "burston_prime_blueprint",
+   "name": "Burston Prime Blueprint",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "burston_prime_receiver",
+   "name": "Burston Prime Receiver",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "burston_prime_set",
+   "name": "Burston Prime Set",
+   "ducats": 90,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "burston_prime_stock",
+   "name": "Burston Prime Stock",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "caliban_prime_blueprint",
+   "name": "Caliban Prime Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "caliban_prime_chassis_blueprint",
+   "name": "Caliban Prime Chassis Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "caliban_prime_neuroptics_blueprint",
+   "name": "Caliban Prime Neuroptics Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "caliban_prime_set",
    "name": "Caliban Prime Set",
-   "ducats": 260
+   "ducats": 260,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "caliban_prime_systems_blueprint",
+   "name": "Caliban Prime Systems Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "cedo_prime_barrel",
+   "name": "Cedo Prime Barrel",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "cedo_prime_blueprint",
+   "name": "Cedo Prime Blueprint",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "cedo_prime_receiver",
+   "name": "Cedo Prime Receiver",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "cedo_prime_set",
+   "name": "Cedo Prime Set",
+   "ducats": 205,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "cedo_prime_stock",
+   "name": "Cedo Prime Stock",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "cernos_prime_blueprint",
+   "name": "Cernos Prime Blueprint",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "cernos_prime_grip",
+   "name": "Cernos Prime Grip",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "cernos_prime_lower_limb",
+   "name": "Cernos Prime Lower Limb",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "cernos_prime_set",
+   "name": "Cernos Prime Set",
+   "ducats": 200,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "cernos_prime_string",
+   "name": "Cernos Prime String",
+   "ducats": 25,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "cernos_prime_upper_limb",
+   "name": "Cernos Prime Upper Limb",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "chroma_prime_blueprint",
+   "name": "Chroma Prime Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "chroma_prime_chassis_blueprint",
+   "name": "Chroma Prime Chassis Blueprint",
+   "ducats": 25,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "chroma_prime_neuroptics_blueprint",
+   "name": "Chroma Prime Neuroptics Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "chroma_prime_set",
    "name": "Chroma Prime Set",
-   "ducats": 205
+   "ducats": 205,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "chroma_prime_systems_blueprint",
+   "name": "Chroma Prime Systems Blueprint",
+   "ducats": 65,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "citrine_prime_blueprint",
+   "name": "Citrine Prime Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "citrine_prime_chassis_blueprint",
+   "name": "Citrine Prime Chassis Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "citrine_prime_neuroptics_blueprint",
+   "name": "Citrine Prime Neuroptics Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "citrine_prime_set",
    "name": "Citrine Prime Set",
-   "ducats": 260
+   "ducats": 260,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "citrine_prime_systems_blueprint",
+   "name": "Citrine Prime Systems Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "cobra_and_crane_prime_blade",
+   "name": "Cobra & Crane Prime Blade",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "cobra_and_crane_prime_blueprint",
+   "name": "Cobra & Crane Prime Blueprint",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "cobra_and_crane_prime_guard",
+   "name": "Cobra & Crane Prime Guard",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "cobra_and_crane_prime_hilt",
+   "name": "Cobra & Crane Prime Hilt",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "cobra_and_crane_prime_set",
+   "name": "Cobra & Crane Prime Set",
+   "ducats": 205,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "corinth_prime_barrel",
+   "name": "Corinth Prime Barrel",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "corinth_prime_blueprint",
+   "name": "Corinth Prime Blueprint",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "corinth_prime_receiver",
+   "name": "Corinth Prime Receiver",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "corinth_prime_set",
+   "name": "Corinth Prime Set",
+   "ducats": 260,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "corinth_prime_stock",
+   "name": "Corinth Prime Stock",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "corufell_prime_blueprint",
+   "name": "Corufell Prime Blueprint",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "corufell_prime_handle",
+   "name": "Corufell Prime Handle",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "corufell_prime_receiver",
+   "name": "Corufell Prime Receiver",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "corufell_prime_set",
+   "name": "Corufell Prime Set",
+   "ducats": 175,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "corufell_prime_stock",
+   "name": "Corufell Prime Stock",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "daikyu_prime_blueprint",
+   "name": "Daikyu Prime Blueprint",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "daikyu_prime_grip",
+   "name": "Daikyu Prime Grip",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "daikyu_prime_lower_limb",
+   "name": "Daikyu Prime Lower Limb",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "daikyu_prime_set",
+   "name": "Daikyu Prime Set",
+   "ducats": 220,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "daikyu_prime_string",
+   "name": "Daikyu Prime String",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "daikyu_prime_upper_limb",
+   "name": "Daikyu Prime Upper Limb",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "dakra_prime_blade",
+   "name": "Dakra Prime Blade",
+   "ducats": 65,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "dakra_prime_blueprint",
+   "name": "Dakra Prime Blueprint",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "dakra_prime_handle",
+   "name": "Dakra Prime Handle",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "dakra_prime_set",
+   "name": "Dakra Prime Set",
+   "ducats": 125,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "destreza_prime_blade",
+   "name": "Destreza Prime Blade",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "destreza_prime_blueprint",
+   "name": "Destreza Prime Blueprint",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "destreza_prime_handle",
+   "name": "Destreza Prime Handle",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "destreza_prime_set",
+   "name": "Destreza Prime Set",
+   "ducats": 160,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "dual_kamas_prime_blade",
+   "name": "Dual Kamas Prime Blade",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "dual_kamas_prime_blueprint",
+   "name": "Dual Kamas Prime Blueprint",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "dual_kamas_prime_handle",
+   "name": "Dual Kamas Prime Handle",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "dual_kamas_prime_set",
+   "name": "Dual Kamas Prime Set",
+   "ducats": 305,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "dual_keres_prime_blade",
+   "name": "Dual Keres Prime Blade",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "dual_keres_prime_blueprint",
+   "name": "Dual Keres Prime Blueprint",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "dual_keres_prime_handle",
+   "name": "Dual Keres Prime Handle",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "dual_keres_prime_set",
+   "name": "Dual Keres Prime Set",
+   "ducats": 220,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "dual_zoren_prime_blade",
+   "name": "Dual Zoren Prime Blade",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "dual_zoren_prime_blueprint",
+   "name": "Dual Zoren Prime Blueprint",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "dual_zoren_prime_handle",
+   "name": "Dual Zoren Prime Handle",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "dual_zoren_prime_set",
+   "name": "Dual Zoren Prime Set",
+   "ducats": 275,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "ember_prime_blueprint",
+   "name": "Ember Prime Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "ember_prime_chassis_blueprint",
+   "name": "Ember Prime Chassis Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "ember_prime_neuroptics_blueprint",
+   "name": "Ember Prime Neuroptics Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "ember_prime_set",
    "name": "Ember Prime Set",
-   "ducats": 175
+   "ducats": 175,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "ember_prime_systems_blueprint",
+   "name": "Ember Prime Systems Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "epitaph_prime_barrel",
+   "name": "Epitaph Prime Barrel",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "epitaph_prime_blueprint",
+   "name": "Epitaph Prime Blueprint",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "epitaph_prime_receiver",
+   "name": "Epitaph Prime Receiver",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "epitaph_prime_set",
+   "name": "Epitaph Prime Set",
+   "ducats": 160,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "equinox_prime_blueprint",
+   "name": "Equinox Prime Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "equinox_prime_chassis_blueprint",
+   "name": "Equinox Prime Chassis Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "equinox_prime_neuroptics_blueprint",
+   "name": "Equinox Prime Neuroptics Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "equinox_prime_set",
    "name": "Equinox Prime Set",
-   "ducats": 205
+   "ducats": 205,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "equinox_prime_systems_blueprint",
+   "name": "Equinox Prime Systems Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "euphona_prime_barrel",
+   "name": "Euphona Prime Barrel",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "euphona_prime_blueprint",
+   "name": "Euphona Prime Blueprint",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "euphona_prime_receiver",
+   "name": "Euphona Prime Receiver",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "euphona_prime_set",
+   "name": "Euphona Prime Set",
+   "ducats": 160,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "fang_prime_blade",
+   "name": "Fang Prime Blade",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "fang_prime_blueprint",
+   "name": "Fang Prime Blueprint",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "fang_prime_handle",
+   "name": "Fang Prime Handle",
+   "ducats": 25,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "fang_prime_set",
+   "name": "Fang Prime Set",
+   "ducats": 95,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "fragor_prime_blueprint",
+   "name": "Fragor Prime Blueprint",
+   "ducats": 65,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "fragor_prime_handle",
+   "name": "Fragor Prime Handle",
+   "ducats": 65,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "fragor_prime_head",
+   "name": "Fragor Prime Head",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "fragor_prime_set",
+   "name": "Fragor Prime Set",
+   "ducats": 145,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "frost_prime_blueprint",
+   "name": "Frost Prime Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "frost_prime_chassis_blueprint",
+   "name": "Frost Prime Chassis Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "frost_prime_neuroptics_blueprint",
+   "name": "Frost Prime Neuroptics Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "frost_prime_set",
    "name": "Frost Prime Set",
-   "ducats": 175
+   "ducats": 175,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "frost_prime_systems_blueprint",
+   "name": "Frost Prime Systems Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "fulmin_prime_barrel",
+   "name": "Fulmin Prime Barrel",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "fulmin_prime_blueprint",
+   "name": "Fulmin Prime Blueprint",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "fulmin_prime_receiver",
+   "name": "Fulmin Prime Receiver",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "fulmin_prime_set",
+   "name": "Fulmin Prime Set",
+   "ducats": 205,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "fulmin_prime_stock",
+   "name": "Fulmin Prime Stock",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "galatine_prime_blade",
+   "name": "Galatine Prime Blade",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "galatine_prime_blueprint",
+   "name": "Galatine Prime Blueprint",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "galatine_prime_handle",
+   "name": "Galatine Prime Handle",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "galatine_prime_set",
+   "name": "Galatine Prime Set",
+   "ducats": 160,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "gara_prime_blueprint",
+   "name": "Gara Prime Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "gara_prime_chassis_blueprint",
+   "name": "Gara Prime Chassis Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "gara_prime_neuroptics_blueprint",
+   "name": "Gara Prime Neuroptics Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "gara_prime_set",
    "name": "Gara Prime Set",
-   "ducats": 205
+   "ducats": 205,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "gara_prime_systems_blueprint",
+   "name": "Gara Prime Systems Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "garuda_prime_blueprint",
+   "name": "Garuda Prime Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "garuda_prime_chassis_blueprint",
+   "name": "Garuda Prime Chassis Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "garuda_prime_neuroptics_blueprint",
+   "name": "Garuda Prime Neuroptics Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "garuda_prime_set",
    "name": "Garuda Prime Set",
-   "ducats": 225
+   "ducats": 225,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "garuda_prime_systems_blueprint",
+   "name": "Garuda Prime Systems Blueprint",
+   "ducats": 65,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "gauss_prime_blueprint",
+   "name": "Gauss Prime Blueprint",
+   "ducats": 25,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "gauss_prime_chassis_blueprint",
+   "name": "Gauss Prime Chassis Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "gauss_prime_neuroptics_blueprint",
+   "name": "Gauss Prime Neuroptics Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "gauss_prime_set",
    "name": "Gauss Prime Set",
-   "ducats": 185
+   "ducats": 185,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "gauss_prime_systems_blueprint",
+   "name": "Gauss Prime Systems Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "glaive_prime_blade",
+   "name": "Glaive Prime Blade",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "glaive_prime_blueprint",
+   "name": "Glaive Prime Blueprint",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "glaive_prime_disc",
+   "name": "Glaive Prime Disc",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "glaive_prime_set",
+   "name": "Glaive Prime Set",
+   "ducats": 235,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "gram_prime_blade",
+   "name": "Gram Prime Blade",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "gram_prime_blueprint",
+   "name": "Gram Prime Blueprint",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "gram_prime_handle",
+   "name": "Gram Prime Handle",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "gram_prime_set",
+   "name": "Gram Prime Set",
+   "ducats": 160,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "grendel_prime_blueprint",
+   "name": "Grendel Prime Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "grendel_prime_chassis_blueprint",
+   "name": "Grendel Prime Chassis Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "grendel_prime_neuroptics_blueprint",
+   "name": "Grendel Prime Neuroptics Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "grendel_prime_set",
    "name": "Grendel Prime Set",
-   "ducats": 225
+   "ducats": 225,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "grendel_prime_systems_blueprint",
+   "name": "Grendel Prime Systems Blueprint",
+   "ducats": 65,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "guandao_prime_blade",
+   "name": "Guandao Prime Blade",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "guandao_prime_blueprint",
+   "name": "Guandao Prime Blueprint",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "guandao_prime_handle",
+   "name": "Guandao Prime Handle",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "guandao_prime_set",
+   "name": "Guandao Prime Set",
+   "ducats": 175,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "gunsen_prime_blade",
+   "name": "Gunsen Prime Blade",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "gunsen_prime_blueprint",
+   "name": "Gunsen Prime Blueprint",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "gunsen_prime_handle",
+   "name": "Gunsen Prime Handle",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "gunsen_prime_set",
+   "name": "Gunsen Prime Set",
+   "ducats": 305,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "gyre_prime_blueprint",
+   "name": "Gyre Prime Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "gyre_prime_chassis_blueprint",
+   "name": "Gyre Prime Chassis Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "gyre_prime_neuroptics_blueprint",
+   "name": "Gyre Prime Neuroptics Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "gyre_prime_set",
    "name": "Gyre Prime Set",
-   "ducats": 205
+   "ducats": 205,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "gyre_prime_systems_blueprint",
+   "name": "Gyre Prime Systems Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "harrow_prime_blueprint",
+   "name": "Harrow Prime Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "harrow_prime_chassis_blueprint",
+   "name": "Harrow Prime Chassis Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "harrow_prime_neuroptics_blueprint",
+   "name": "Harrow Prime Neuroptics Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "harrow_prime_set",
    "name": "Harrow Prime Set",
-   "ducats": 205
+   "ducats": 205,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "harrow_prime_systems_blueprint",
+   "name": "Harrow Prime Systems Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "hikou_prime_blueprint",
+   "name": "Hikou Prime Blueprint",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "hikou_prime_pouch",
+   "name": "Hikou Prime Pouch",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "hikou_prime_set",
+   "name": "Hikou Prime Set",
+   "ducats": 75,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "hikou_prime_stars",
+   "name": "Hikou Prime Stars",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "hildryn_prime_blueprint",
+   "name": "Hildryn Prime Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "hildryn_prime_chassis_blueprint",
+   "name": "Hildryn Prime Chassis Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "hildryn_prime_neuroptics_blueprint",
+   "name": "Hildryn Prime Neuroptics Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "hildryn_prime_set",
    "name": "Hildryn Prime Set",
-   "ducats": 205
+   "ducats": 205,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "hildryn_prime_systems_blueprint",
+   "name": "Hildryn Prime Systems Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "hydroid_prime_blueprint",
+   "name": "Hydroid Prime Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "hydroid_prime_chassis_blueprint",
+   "name": "Hydroid Prime Chassis Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "hydroid_prime_neuroptics_blueprint",
+   "name": "Hydroid Prime Neuroptics Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "hydroid_prime_set",
    "name": "Hydroid Prime Set",
-   "ducats": 205
+   "ducats": 205,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "hydroid_prime_systems_blueprint",
+   "name": "Hydroid Prime Systems Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "hystrix_prime_barrel",
+   "name": "Hystrix Prime Barrel",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "hystrix_prime_blueprint",
+   "name": "Hystrix Prime Blueprint",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "hystrix_prime_receiver",
+   "name": "Hystrix Prime Receiver",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "hystrix_prime_set",
+   "name": "Hystrix Prime Set",
+   "ducats": 160,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "inaros_prime_blueprint",
+   "name": "Inaros Prime Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "inaros_prime_chassis_blueprint",
+   "name": "Inaros Prime Chassis Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "inaros_prime_neuroptics_blueprint",
+   "name": "Inaros Prime Neuroptics Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "inaros_prime_set",
    "name": "Inaros Prime Set",
-   "ducats": 205
+   "ducats": 205,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "inaros_prime_systems_blueprint",
+   "name": "Inaros Prime Systems Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "ivara_prime_blueprint",
+   "name": "Ivara Prime Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "ivara_prime_chassis_blueprint",
+   "name": "Ivara Prime Chassis Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "ivara_prime_neuroptics_blueprint",
+   "name": "Ivara Prime Neuroptics Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "ivara_prime_set",
    "name": "Ivara Prime Set",
-   "ducats": 205
+   "ducats": 205,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "ivara_prime_systems_blueprint",
+   "name": "Ivara Prime Systems Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "karyst_prime_blade",
+   "name": "Karyst Prime Blade",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "karyst_prime_blueprint",
+   "name": "Karyst Prime Blueprint",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "karyst_prime_handle",
+   "name": "Karyst Prime Handle",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "karyst_prime_set",
+   "name": "Karyst Prime Set",
+   "ducats": 160,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "kestrel_prime_blade",
+   "name": "Kestrel Prime Blade",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "kestrel_prime_blueprint",
+   "name": "Kestrel Prime Blueprint",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "kestrel_prime_grip",
+   "name": "Kestrel Prime Grip",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "kestrel_prime_set",
+   "name": "Kestrel Prime Set",
+   "ducats": 175,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "khora_prime_blueprint",
+   "name": "Khora Prime Blueprint",
+   "ducats": 65,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "khora_prime_chassis_blueprint",
+   "name": "Khora Prime Chassis Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "khora_prime_neuroptics_blueprint",
+   "name": "Khora Prime Neuroptics Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "khora_prime_set",
    "name": "Khora Prime Set",
-   "ducats": 225
+   "ducats": 225,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "khora_prime_systems_blueprint",
+   "name": "Khora Prime Systems Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "knell_prime_barrel",
+   "name": "Knell Prime Barrel",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "knell_prime_blueprint",
+   "name": "Knell Prime Blueprint",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "knell_prime_receiver",
+   "name": "Knell Prime Receiver",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "knell_prime_set",
+   "name": "Knell Prime Set",
+   "ducats": 160,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "kogake_prime_blueprint",
+   "name": "Kogake Prime Blueprint",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "kogake_prime_boot",
+   "name": "Kogake Prime Boot",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "kogake_prime_gauntlet",
+   "name": "Kogake Prime Gauntlet",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "kogake_prime_set",
+   "name": "Kogake Prime Set",
+   "ducats": 275,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "kompressa_prime_barrel",
+   "name": "Kompressa Prime Barrel",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "kompressa_prime_blueprint",
+   "name": "Kompressa Prime Blueprint",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "kompressa_prime_receiver",
+   "name": "Kompressa Prime Receiver",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "kompressa_prime_set",
+   "name": "Kompressa Prime Set",
+   "ducats": 160,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "kronen_prime_blade",
+   "name": "Kronen Prime Blade",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "kronen_prime_blueprint",
+   "name": "Kronen Prime Blueprint",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "kronen_prime_handle",
+   "name": "Kronen Prime Handle",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "kronen_prime_set",
+   "name": "Kronen Prime Set",
+   "ducats": 305,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "latron_prime_barrel",
+   "name": "Latron Prime Barrel",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "latron_prime_blueprint",
+   "name": "Latron Prime Blueprint",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "latron_prime_receiver",
+   "name": "Latron Prime Receiver",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "latron_prime_set",
+   "name": "Latron Prime Set",
+   "ducats": 60,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "latron_prime_stock",
+   "name": "Latron Prime Stock",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "lavos_prime_blueprint",
+   "name": "Lavos Prime Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "lavos_prime_chassis_blueprint",
+   "name": "Lavos Prime Chassis Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "lavos_prime_neuroptics_blueprint",
+   "name": "Lavos Prime Neuroptics Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "lavos_prime_set",
    "name": "Lavos Prime Set",
-   "ducats": 205
+   "ducats": 205,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "lavos_prime_systems_blueprint",
+   "name": "Lavos Prime Systems Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "lex_prime_barrel",
+   "name": "Lex Prime Barrel",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "lex_prime_blueprint",
+   "name": "Lex Prime Blueprint",
+   "ducats": 25,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "lex_prime_receiver",
+   "name": "Lex Prime Receiver",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "lex_prime_set",
+   "name": "Lex Prime Set",
+   "ducats": 55,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "limbo_prime_blueprint",
+   "name": "Limbo Prime Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "limbo_prime_chassis_blueprint",
+   "name": "Limbo Prime Chassis Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "limbo_prime_neuroptics_blueprint",
+   "name": "Limbo Prime Neuroptics Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "limbo_prime_set",
    "name": "Limbo Prime Set",
-   "ducats": 260
+   "ducats": 260,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "limbo_prime_systems_blueprint",
+   "name": "Limbo Prime Systems Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "loki_prime_blueprint",
+   "name": "Loki Prime Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "loki_prime_chassis_blueprint",
+   "name": "Loki Prime Chassis Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "loki_prime_neuroptics_blueprint",
+   "name": "Loki Prime Neuroptics Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "loki_prime_set",
    "name": "Loki Prime Set",
-   "ducats": 175
+   "ducats": 175,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "loki_prime_systems_blueprint",
+   "name": "Loki Prime Systems Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "mag_prime_blueprint",
+   "name": "Mag Prime Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "mag_prime_chassis_blueprint",
+   "name": "Mag Prime Chassis Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "mag_prime_neuroptics_blueprint",
+   "name": "Mag Prime Neuroptics Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "mag_prime_set",
    "name": "Mag Prime Set",
-   "ducats": 175
+   "ducats": 175,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "mag_prime_systems_blueprint",
+   "name": "Mag Prime Systems Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "magnus_prime_barrel",
+   "name": "Magnus Prime Barrel",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "magnus_prime_blueprint",
+   "name": "Magnus Prime Blueprint",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "magnus_prime_receiver",
+   "name": "Magnus Prime Receiver",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "magnus_prime_set",
+   "name": "Magnus Prime Set",
+   "ducats": 160,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "masseter_prime_blade",
+   "name": "Masseter Prime Blade",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "masseter_prime_blueprint",
+   "name": "Masseter Prime Blueprint",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "masseter_prime_handle",
+   "name": "Masseter Prime Handle",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "masseter_prime_set",
+   "name": "Masseter Prime Set",
+   "ducats": 160,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "mesa_prime_blueprint",
+   "name": "Mesa Prime Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "mesa_prime_chassis_blueprint",
+   "name": "Mesa Prime Chassis Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "mesa_prime_neuroptics_blueprint",
+   "name": "Mesa Prime Neuroptics Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "mesa_prime_set",
    "name": "Mesa Prime Set",
-   "ducats": 260
+   "ducats": 260,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "mesa_prime_systems_blueprint",
+   "name": "Mesa Prime Systems Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "mirage_prime_blueprint",
+   "name": "Mirage Prime Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "mirage_prime_chassis_blueprint",
+   "name": "Mirage Prime Chassis Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "mirage_prime_neuroptics_blueprint",
+   "name": "Mirage Prime Neuroptics Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "mirage_prime_set",
    "name": "Mirage Prime Set",
-   "ducats": 175
+   "ducats": 175,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "mirage_prime_systems_blueprint",
+   "name": "Mirage Prime Systems Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "nagantaka_prime_barrel",
+   "name": "Nagantaka Prime Barrel",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "nagantaka_prime_blueprint",
+   "name": "Nagantaka Prime Blueprint",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "nagantaka_prime_receiver",
+   "name": "Nagantaka Prime Receiver",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "nagantaka_prime_set",
+   "name": "Nagantaka Prime Set",
+   "ducats": 205,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "nagantaka_prime_stock",
+   "name": "Nagantaka Prime Stock",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "nami_skyla_prime_blade",
+   "name": "Nami Skyla Prime Blade",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "nami_skyla_prime_blueprint",
+   "name": "Nami Skyla Prime Blueprint",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "nami_skyla_prime_handle",
+   "name": "Nami Skyla Prime Handle",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "nami_skyla_prime_set",
+   "name": "Nami Skyla Prime Set",
+   "ducats": 305,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "nekros_prime_blueprint",
+   "name": "Nekros Prime Blueprint",
+   "ducats": 65,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "nekros_prime_chassis_blueprint",
+   "name": "Nekros Prime Chassis Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "nekros_prime_neuroptics_blueprint",
+   "name": "Nekros Prime Neuroptics Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "nekros_prime_set",
    "name": "Nekros Prime Set",
-   "ducats": 225
+   "ducats": 225,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "nekros_prime_systems_blueprint",
+   "name": "Nekros Prime Systems Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "nezha_prime_blueprint",
+   "name": "Nezha Prime Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "nezha_prime_chassis_blueprint",
+   "name": "Nezha Prime Chassis Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "nezha_prime_neuroptics_blueprint",
+   "name": "Nezha Prime Neuroptics Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "nezha_prime_set",
    "name": "Nezha Prime Set",
-   "ducats": 260
+   "ducats": 260,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "nezha_prime_systems_blueprint",
+   "name": "Nezha Prime Systems Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "nidus_prime_blueprint",
+   "name": "Nidus Prime Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "nidus_prime_chassis_blueprint",
+   "name": "Nidus Prime Chassis Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "nidus_prime_neuroptics_blueprint",
+   "name": "Nidus Prime Neuroptics Blueprint",
+   "ducats": 65,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "nidus_prime_set",
    "name": "Nidus Prime Set",
-   "ducats": 225
+   "ducats": 225,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "nidus_prime_systems_blueprint",
+   "name": "Nidus Prime Systems Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "nikana_prime_blade",
+   "name": "Nikana Prime Blade",
+   "ducats": 65,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "nikana_prime_blueprint",
+   "name": "Nikana Prime Blueprint",
+   "ducats": 25,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "nikana_prime_hilt",
+   "name": "Nikana Prime Hilt",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "nikana_prime_set",
+   "name": "Nikana Prime Set",
+   "ducats": 190,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "ninkondi_prime_blueprint",
+   "name": "Ninkondi Prime Blueprint",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "ninkondi_prime_chain",
+   "name": "Ninkondi Prime Chain",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "ninkondi_prime_handle",
+   "name": "Ninkondi Prime Handle",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "ninkondi_prime_set",
+   "name": "Ninkondi Prime Set",
+   "ducats": 260,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "nova_prime_blueprint",
+   "name": "Nova Prime Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "nova_prime_chassis_blueprint",
+   "name": "Nova Prime Chassis Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "nova_prime_neuroptics_blueprint",
+   "name": "Nova Prime Neuroptics Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "nova_prime_set",
    "name": "Nova Prime Set",
-   "ducats": 175
+   "ducats": 175,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "nova_prime_systems_blueprint",
+   "name": "Nova Prime Systems Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "nyx_prime_blueprint",
+   "name": "Nyx Prime Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "nyx_prime_chassis_blueprint",
+   "name": "Nyx Prime Chassis Blueprint",
+   "ducats": 65,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "nyx_prime_neuroptics_blueprint",
+   "name": "Nyx Prime Neuroptics Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "nyx_prime_set",
    "name": "Nyx Prime Set",
-   "ducats": 225
+   "ducats": 225,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "nyx_prime_systems_blueprint",
+   "name": "Nyx Prime Systems Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "oberon_prime_blueprint",
+   "name": "Oberon Prime Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "oberon_prime_chassis_blueprint",
+   "name": "Oberon Prime Chassis Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "oberon_prime_neuroptics_blueprint",
+   "name": "Oberon Prime Neuroptics Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "oberon_prime_set",
    "name": "Oberon Prime Set",
-   "ducats": 225
+   "ducats": 225,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "oberon_prime_systems_blueprint",
+   "name": "Oberon Prime Systems Blueprint",
+   "ducats": 65,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "octavia_prime_blueprint",
+   "name": "Octavia Prime Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "octavia_prime_chassis_blueprint",
+   "name": "Octavia Prime Chassis Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "octavia_prime_neuroptics_blueprint",
+   "name": "Octavia Prime Neuroptics Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "octavia_prime_set",
    "name": "Octavia Prime Set",
-   "ducats": 175
+   "ducats": 175,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "octavia_prime_systems_blueprint",
+   "name": "Octavia Prime Systems Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "okina_prime_blade",
+   "name": "Okina Prime Blade",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "okina_prime_blueprint",
+   "name": "Okina Prime Blueprint",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "okina_prime_handle",
+   "name": "Okina Prime Handle",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "okina_prime_set",
+   "name": "Okina Prime Set",
+   "ducats": 220,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "orthos_prime_blade",
+   "name": "Orthos Prime Blade",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "orthos_prime_blueprint",
+   "name": "Orthos Prime Blueprint",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "orthos_prime_handle",
+   "name": "Orthos Prime Handle",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "orthos_prime_set",
+   "name": "Orthos Prime Set",
+   "ducats": 150,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "pandero_prime_barrel",
+   "name": "Pandero Prime Barrel",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "pandero_prime_blueprint",
+   "name": "Pandero Prime Blueprint",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "pandero_prime_receiver",
+   "name": "Pandero Prime Receiver",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "pandero_prime_set",
+   "name": "Pandero Prime Set",
+   "ducats": 160,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "pangolin_prime_blade",
+   "name": "Pangolin Prime Blade",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "pangolin_prime_blueprint",
+   "name": "Pangolin Prime Blueprint",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "pangolin_prime_handle",
+   "name": "Pangolin Prime Handle",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "pangolin_prime_set",
+   "name": "Pangolin Prime Set",
+   "ducats": 160,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "panthera_prime_barrel",
+   "name": "Panthera Prime Barrel",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "panthera_prime_blueprint",
+   "name": "Panthera Prime Blueprint",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "panthera_prime_receiver",
+   "name": "Panthera Prime Receiver",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "panthera_prime_set",
+   "name": "Panthera Prime Set",
+   "ducats": 260,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "panthera_prime_stock",
+   "name": "Panthera Prime Stock",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "paris_prime_blueprint",
+   "name": "Paris Prime Blueprint",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "paris_prime_grip",
+   "name": "Paris Prime Grip",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "paris_prime_lower_limb",
+   "name": "Paris Prime Lower Limb",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "paris_prime_set",
+   "name": "Paris Prime Set",
+   "ducats": 115,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "paris_prime_string",
+   "name": "Paris Prime String",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "paris_prime_upper_limb",
+   "name": "Paris Prime Upper Limb",
+   "ducats": 25,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "perigale_prime_barrel",
+   "name": "Perigale Prime Barrel",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "perigale_prime_blueprint",
+   "name": "Perigale Prime Blueprint",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "perigale_prime_receiver",
+   "name": "Perigale Prime Receiver",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "perigale_prime_set",
+   "name": "Perigale Prime Set",
+   "ducats": 175,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "perigale_prime_stock",
+   "name": "Perigale Prime Stock",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "phantasma_prime_barrel",
+   "name": "Phantasma Prime Barrel",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "phantasma_prime_blueprint",
+   "name": "Phantasma Prime Blueprint",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "phantasma_prime_receiver",
+   "name": "Phantasma Prime Receiver",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "phantasma_prime_set",
+   "name": "Phantasma Prime Set",
+   "ducats": 225,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "phantasma_prime_stock",
+   "name": "Phantasma Prime Stock",
+   "ducats": 65,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "protea_prime_blueprint",
+   "name": "Protea Prime Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "protea_prime_chassis_blueprint",
+   "name": "Protea Prime Chassis Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "protea_prime_neuroptics_blueprint",
+   "name": "Protea Prime Neuroptics Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "protea_prime_set",
    "name": "Protea Prime Set",
-   "ducats": 260
+   "ducats": 260,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "protea_prime_systems_blueprint",
+   "name": "Protea Prime Systems Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "pyrana_prime_barrel",
+   "name": "Pyrana Prime Barrel",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "pyrana_prime_blueprint",
+   "name": "Pyrana Prime Blueprint",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "pyrana_prime_receiver",
+   "name": "Pyrana Prime Receiver",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "pyrana_prime_set",
+   "name": "Pyrana Prime Set",
+   "ducats": 160,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "quassus_prime_blade",
+   "name": "Quassus Prime Blade",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "quassus_prime_blueprint",
+   "name": "Quassus Prime Blueprint",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "quassus_prime_handle",
+   "name": "Quassus Prime Handle",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "quassus_prime_set",
+   "name": "Quassus Prime Set",
+   "ducats": 275,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "reaper_prime_blade",
+   "name": "Reaper Prime Blade",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "reaper_prime_blueprint",
+   "name": "Reaper Prime Blueprint",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "reaper_prime_handle",
+   "name": "Reaper Prime Handle",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "reaper_prime_set",
+   "name": "Reaper Prime Set",
+   "ducats": 75,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "redeemer_prime_blade",
+   "name": "Redeemer Prime Blade",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "redeemer_prime_blueprint",
+   "name": "Redeemer Prime Blueprint",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "redeemer_prime_handle",
+   "name": "Redeemer Prime Handle",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "redeemer_prime_set",
+   "name": "Redeemer Prime Set",
+   "ducats": 160,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "revenant_prime_blueprint",
+   "name": "Revenant Prime Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "revenant_prime_chassis_blueprint",
+   "name": "Revenant Prime Chassis Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "revenant_prime_neuroptics_blueprint",
+   "name": "Revenant Prime Neuroptics Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "revenant_prime_set",
    "name": "Revenant Prime Set",
-   "ducats": 205
+   "ducats": 205,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "revenant_prime_systems_blueprint",
+   "name": "Revenant Prime Systems Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "rhino_prime_blueprint",
+   "name": "Rhino Prime Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "rhino_prime_chassis_blueprint",
+   "name": "Rhino Prime Chassis Blueprint",
+   "ducats": 65,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "rhino_prime_neuroptics_blueprint",
+   "name": "Rhino Prime Neuroptics Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "rhino_prime_set",
    "name": "Rhino Prime Set",
-   "ducats": 225
+   "ducats": 225,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "rhino_prime_systems_blueprint",
+   "name": "Rhino Prime Systems Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "rubico_prime_barrel",
+   "name": "Rubico Prime Barrel",
+   "ducats": 25,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "rubico_prime_blueprint",
+   "name": "Rubico Prime Blueprint",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "rubico_prime_receiver",
+   "name": "Rubico Prime Receiver",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "rubico_prime_set",
+   "name": "Rubico Prime Set",
+   "ducats": 185,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "rubico_prime_stock",
+   "name": "Rubico Prime Stock",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "sarofang_prime_blade",
+   "name": "Sarofang Prime Blade",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "sarofang_prime_blueprint",
+   "name": "Sarofang Prime Blueprint",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "sarofang_prime_handle",
+   "name": "Sarofang Prime Handle",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "sarofang_prime_set",
+   "name": "Sarofang Prime Set",
+   "ducats": 160,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "saryn_prime_blueprint",
+   "name": "Saryn Prime Blueprint",
+   "ducats": 65,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "saryn_prime_chassis_blueprint",
+   "name": "Saryn Prime Chassis Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "saryn_prime_neuroptics_blueprint",
+   "name": "Saryn Prime Neuroptics Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "saryn_prime_set",
    "name": "Saryn Prime Set",
-   "ducats": 225
+   "ducats": 225,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "saryn_prime_systems_blueprint",
+   "name": "Saryn Prime Systems Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "scindo_prime_blade",
+   "name": "Scindo Prime Blade",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "scindo_prime_blueprint",
+   "name": "Scindo Prime Blueprint",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "scindo_prime_handle",
+   "name": "Scindo Prime Handle",
+   "ducats": 25,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "scindo_prime_set",
+   "name": "Scindo Prime Set",
+   "ducats": 170,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "scourge_prime_barrel",
+   "name": "Scourge Prime Barrel",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "scourge_prime_blade",
+   "name": "Scourge Prime Blade",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "scourge_prime_blueprint",
+   "name": "Scourge Prime Blueprint",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "scourge_prime_handle",
+   "name": "Scourge Prime Handle",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "scourge_prime_set",
+   "name": "Scourge Prime Set",
+   "ducats": 260,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "sevagoth_prime_blueprint",
+   "name": "Sevagoth Prime Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "sevagoth_prime_chassis_blueprint",
+   "name": "Sevagoth Prime Chassis Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "sevagoth_prime_neuroptics_blueprint",
+   "name": "Sevagoth Prime Neuroptics Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "sevagoth_prime_set",
    "name": "Sevagoth Prime Set",
-   "ducats": 175
+   "ducats": 175,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "sevagoth_prime_systems_blueprint",
+   "name": "Sevagoth Prime Systems Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "sicarus_prime_barrel",
+   "name": "Sicarus Prime Barrel",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "sicarus_prime_blueprint",
+   "name": "Sicarus Prime Blueprint",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "sicarus_prime_receiver",
+   "name": "Sicarus Prime Receiver",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "sicarus_prime_set",
+   "name": "Sicarus Prime Set",
+   "ducats": 130,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "silva_and_aegis_prime_blade",
+   "name": "Silva & Aegis Prime Blade",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "silva_and_aegis_prime_blueprint",
+   "name": "Silva & Aegis Prime Blueprint",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "silva_and_aegis_prime_guard",
+   "name": "Silva & Aegis Prime Guard",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "silva_and_aegis_prime_hilt",
+   "name": "Silva & Aegis Prime Hilt",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "silva_and_aegis_prime_set",
+   "name": "Silva & Aegis Prime Set",
+   "ducats": 205,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "soma_prime_barrel",
+   "name": "Soma Prime Barrel",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "soma_prime_blueprint",
+   "name": "Soma Prime Blueprint",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "soma_prime_receiver",
+   "name": "Soma Prime Receiver",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "soma_prime_set",
+   "name": "Soma Prime Set",
+   "ducats": 175,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "soma_prime_stock",
+   "name": "Soma Prime Stock",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "spira_prime_blade",
+   "name": "Spira Prime Blade",
+   "ducats": 65,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "spira_prime_blueprint",
+   "name": "Spira Prime Blueprint",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "spira_prime_pouch",
+   "name": "Spira Prime Pouch",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "spira_prime_set",
+   "name": "Spira Prime Set",
+   "ducats": 345,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "steflos_prime_barrel",
+   "name": "Steflos Prime Barrel",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "steflos_prime_blueprint",
+   "name": "Steflos Prime Blueprint",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "steflos_prime_receiver",
+   "name": "Steflos Prime Receiver",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "steflos_prime_set",
+   "name": "Steflos Prime Set",
+   "ducats": 205,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "steflos_prime_stock",
+   "name": "Steflos Prime Stock",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "stradavar_prime_barrel",
+   "name": "Stradavar Prime Barrel",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "stradavar_prime_blueprint",
+   "name": "Stradavar Prime Blueprint",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "stradavar_prime_receiver",
+   "name": "Stradavar Prime Receiver",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "stradavar_prime_set",
+   "name": "Stradavar Prime Set",
+   "ducats": 175,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "stradavar_prime_stock",
+   "name": "Stradavar Prime Stock",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "strun_prime_barrel",
+   "name": "Strun Prime Barrel",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "strun_prime_blueprint",
+   "name": "Strun Prime Blueprint",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "strun_prime_receiver",
+   "name": "Strun Prime Receiver",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "strun_prime_set",
+   "name": "Strun Prime Set",
+   "ducats": 205,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "strun_prime_stock",
+   "name": "Strun Prime Stock",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "styanax_prime_blueprint",
+   "name": "Styanax Prime Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "styanax_prime_chassis_blueprint",
+   "name": "Styanax Prime Chassis Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "styanax_prime_neuroptics_blueprint",
+   "name": "Styanax Prime Neuroptics Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "styanax_prime_set",
    "name": "Styanax Prime Set",
-   "ducats": 205
+   "ducats": 205,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "styanax_prime_systems_blueprint",
+   "name": "Styanax Prime Systems Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "sybaris_prime_barrel",
+   "name": "Sybaris Prime Barrel",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "sybaris_prime_blueprint",
+   "name": "Sybaris Prime Blueprint",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "sybaris_prime_receiver",
+   "name": "Sybaris Prime Receiver",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "sybaris_prime_set",
+   "name": "Sybaris Prime Set",
+   "ducats": 175,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "sybaris_prime_stock",
+   "name": "Sybaris Prime Stock",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "tatsu_prime_blade",
+   "name": "Tatsu Prime Blade",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "tatsu_prime_blueprint",
+   "name": "Tatsu Prime Blueprint",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "tatsu_prime_handle",
+   "name": "Tatsu Prime Handle",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "tatsu_prime_set",
+   "name": "Tatsu Prime Set",
+   "ducats": 160,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "tekko_prime_blade",
+   "name": "Tekko Prime Blade",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "tekko_prime_blueprint",
+   "name": "Tekko Prime Blueprint",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "tekko_prime_gauntlet",
+   "name": "Tekko Prime Gauntlet",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "tekko_prime_set",
+   "name": "Tekko Prime Set",
+   "ducats": 275,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "tenora_prime_barrel",
+   "name": "Tenora Prime Barrel",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "tenora_prime_blueprint",
+   "name": "Tenora Prime Blueprint",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "tenora_prime_receiver",
+   "name": "Tenora Prime Receiver",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "tenora_prime_set",
+   "name": "Tenora Prime Set",
+   "ducats": 260,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "tenora_prime_stock",
+   "name": "Tenora Prime Stock",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "tiberon_prime_barrel",
+   "name": "Tiberon Prime Barrel",
+   "ducats": 65,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "tiberon_prime_blueprint",
+   "name": "Tiberon Prime Blueprint",
+   "ducats": 25,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "tiberon_prime_receiver",
+   "name": "Tiberon Prime Receiver",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "tiberon_prime_set",
+   "name": "Tiberon Prime Set",
+   "ducats": 205,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "tiberon_prime_stock",
+   "name": "Tiberon Prime Stock",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "tigris_prime_barrel",
+   "name": "Tigris Prime Barrel",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "tigris_prime_blueprint",
+   "name": "Tigris Prime Blueprint",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "tigris_prime_receiver",
+   "name": "Tigris Prime Receiver",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "tigris_prime_set",
+   "name": "Tigris Prime Set",
+   "ducats": 205,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "tigris_prime_stock",
+   "name": "Tigris Prime Stock",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "tipedo_prime_blueprint",
+   "name": "Tipedo Prime Blueprint",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "tipedo_prime_handle",
+   "name": "Tipedo Prime Handle",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "tipedo_prime_ornament",
+   "name": "Tipedo Prime Ornament",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "tipedo_prime_set",
+   "name": "Tipedo Prime Set",
+   "ducats": 205,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "titania_prime_blueprint",
+   "name": "Titania Prime Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "titania_prime_chassis_blueprint",
+   "name": "Titania Prime Chassis Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "titania_prime_neuroptics_blueprint",
+   "name": "Titania Prime Neuroptics Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "titania_prime_set",
    "name": "Titania Prime Set",
-   "ducats": 205
+   "ducats": 205,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "titania_prime_systems_blueprint",
+   "name": "Titania Prime Systems Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "trinity_prime_blueprint",
+   "name": "Trinity Prime Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "trinity_prime_chassis_blueprint",
+   "name": "Trinity Prime Chassis Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "trinity_prime_neuroptics_blueprint",
+   "name": "Trinity Prime Neuroptics Blueprint",
+   "ducats": 25,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "trinity_prime_set",
    "name": "Trinity Prime Set",
-   "ducats": 130
+   "ducats": 130,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "trinity_prime_systems_blueprint",
+   "name": "Trinity Prime Systems Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "trumna_prime_barrel",
+   "name": "Trumna Prime Barrel",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "trumna_prime_blueprint",
+   "name": "Trumna Prime Blueprint",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "trumna_prime_receiver",
+   "name": "Trumna Prime Receiver",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "trumna_prime_set",
+   "name": "Trumna Prime Set",
+   "ducats": 260,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "trumna_prime_stock",
+   "name": "Trumna Prime Stock",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "vadarya_prime_barrel",
+   "name": "Vadarya Prime Barrel",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "vadarya_prime_blueprint",
+   "name": "Vadarya Prime Blueprint",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "vadarya_prime_receiver",
+   "name": "Vadarya Prime Receiver",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "vadarya_prime_set",
+   "name": "Vadarya Prime Set",
+   "ducats": 205,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "vadarya_prime_stock",
+   "name": "Vadarya Prime Stock",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "valkyr_prime_blueprint",
+   "name": "Valkyr Prime Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "valkyr_prime_chassis_blueprint",
+   "name": "Valkyr Prime Chassis Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "valkyr_prime_neuroptics_blueprint",
+   "name": "Valkyr Prime Neuroptics Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "valkyr_prime_set",
    "name": "Valkyr Prime Set",
-   "ducats": 225
+   "ducats": 225,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "valkyr_prime_systems_blueprint",
+   "name": "Valkyr Prime Systems Blueprint",
+   "ducats": 65,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "vasto_prime_barrel",
+   "name": "Vasto Prime Barrel",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "vasto_prime_blueprint",
+   "name": "Vasto Prime Blueprint",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "vasto_prime_receiver",
+   "name": "Vasto Prime Receiver",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "vasto_prime_set",
+   "name": "Vasto Prime Set",
+   "ducats": 75,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "vauban_prime_blueprint",
+   "name": "Vauban Prime Blueprint",
+   "ducats": 65,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "vauban_prime_chassis_blueprint",
+   "name": "Vauban Prime Chassis Blueprint",
+   "ducats": 25,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "vauban_prime_neuroptics_blueprint",
+   "name": "Vauban Prime Neuroptics Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "vauban_prime_set",
    "name": "Vauban Prime Set",
-   "ducats": 290
+   "ducats": 290,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "vauban_prime_systems_blueprint",
+   "name": "Vauban Prime Systems Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "vectis_prime_barrel",
+   "name": "Vectis Prime Barrel",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "vectis_prime_blueprint",
+   "name": "Vectis Prime Blueprint",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "vectis_prime_receiver",
+   "name": "Vectis Prime Receiver",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "vectis_prime_set",
+   "name": "Vectis Prime Set",
+   "ducats": 225,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "vectis_prime_stock",
+   "name": "Vectis Prime Stock",
+   "ducats": 65,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "velox_prime_barrel",
+   "name": "Velox Prime Barrel",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "velox_prime_blueprint",
+   "name": "Velox Prime Blueprint",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "velox_prime_receiver",
+   "name": "Velox Prime Receiver",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "velox_prime_set",
+   "name": "Velox Prime Set",
+   "ducats": 160,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "venato_prime_blade",
+   "name": "Venato Prime Blade",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "venato_prime_blueprint",
+   "name": "Venato Prime Blueprint",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "venato_prime_handle",
+   "name": "Venato Prime Handle",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "venato_prime_set",
+   "name": "Venato Prime Set",
+   "ducats": 160,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "venka_prime_blades",
+   "name": "Venka Prime Blades",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "venka_prime_blueprint",
+   "name": "Venka Prime Blueprint",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "venka_prime_gauntlet",
+   "name": "Venka Prime Gauntlet",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "venka_prime_set",
+   "name": "Venka Prime Set",
+   "ducats": 275,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "volnus_prime_blueprint",
+   "name": "Volnus Prime Blueprint",
+   "ducats": 15,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "volnus_prime_handle",
+   "name": "Volnus Prime Handle",
+   "ducats": 100,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "volnus_prime_head",
+   "name": "Volnus Prime Head",
+   "ducats": 45,
+   "group": "melee",
+   "kind": "part"
+  },
+  {
+   "slug": "volnus_prime_set",
+   "name": "Volnus Prime Set",
+   "ducats": 160,
+   "group": "melee",
+   "kind": "set"
+  },
+  {
+   "slug": "volt_prime_blueprint",
+   "name": "Volt Prime Blueprint",
+   "ducats": 25,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "volt_prime_chassis_blueprint",
+   "name": "Volt Prime Chassis Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "volt_prime_neuroptics_blueprint",
+   "name": "Volt Prime Neuroptics Blueprint",
+   "ducats": 65,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "volt_prime_set",
    "name": "Volt Prime Set",
-   "ducats": 180
+   "ducats": 180,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "volt_prime_systems_blueprint",
+   "name": "Volt Prime Systems Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "voruna_prime_blueprint",
+   "name": "Voruna Prime Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "voruna_prime_chassis_blueprint",
+   "name": "Voruna Prime Chassis Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "voruna_prime_neuroptics_blueprint",
+   "name": "Voruna Prime Neuroptics Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "voruna_prime_set",
    "name": "Voruna Prime Set",
-   "ducats": 290
+   "ducats": 290,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "voruna_prime_systems_blueprint",
+   "name": "Voruna Prime Systems Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "wisp_prime_blueprint",
+   "name": "Wisp Prime Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "wisp_prime_chassis_blueprint",
+   "name": "Wisp Prime Chassis Blueprint",
+   "ducats": 65,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "wisp_prime_neuroptics_blueprint",
+   "name": "Wisp Prime Neuroptics Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "wisp_prime_set",
    "name": "Wisp Prime Set",
-   "ducats": 225
+   "ducats": 225,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "wisp_prime_systems_blueprint",
+   "name": "Wisp Prime Systems Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "wukong_prime_blueprint",
+   "name": "Wukong Prime Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "wukong_prime_chassis_blueprint",
+   "name": "Wukong Prime Chassis Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "wukong_prime_neuroptics_blueprint",
+   "name": "Wukong Prime Neuroptics Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "wukong_prime_set",
    "name": "Wukong Prime Set",
-   "ducats": 205
+   "ducats": 205,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "wukong_prime_systems_blueprint",
+   "name": "Wukong Prime Systems Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "xaku_prime_blueprint",
+   "name": "Xaku Prime Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "xaku_prime_chassis_blueprint",
+   "name": "Xaku Prime Chassis Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "xaku_prime_neuroptics_blueprint",
+   "name": "Xaku Prime Neuroptics Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "xaku_prime_set",
    "name": "Xaku Prime Set",
-   "ducats": 205
+   "ducats": 205,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "xaku_prime_systems_blueprint",
+   "name": "Xaku Prime Systems Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "yareli_prime_blueprint",
+   "name": "Yareli Prime Blueprint",
+   "ducats": 45,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "yareli_prime_chassis_blueprint",
+   "name": "Yareli Prime Chassis Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "yareli_prime_neuroptics_blueprint",
+   "name": "Yareli Prime Neuroptics Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "yareli_prime_set",
    "name": "Yareli Prime Set",
-   "ducats": 260
+   "ducats": 260,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "yareli_prime_systems_blueprint",
+   "name": "Yareli Prime Systems Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "zakti_prime_barrel",
+   "name": "Zakti Prime Barrel",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "zakti_prime_blueprint",
+   "name": "Zakti Prime Blueprint",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "zakti_prime_receiver",
+   "name": "Zakti Prime Receiver",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "zakti_prime_set",
+   "name": "Zakti Prime Set",
+   "ducats": 160,
+   "group": "secondary",
+   "kind": "set"
+  },
+  {
+   "slug": "zephyr_prime_blueprint",
+   "name": "Zephyr Prime Blueprint",
+   "ducats": 65,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "zephyr_prime_chassis_blueprint",
+   "name": "Zephyr Prime Chassis Blueprint",
+   "ducats": 25,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "zephyr_prime_neuroptics_blueprint",
+   "name": "Zephyr Prime Neuroptics Blueprint",
+   "ducats": 15,
+   "group": "warframe",
+   "kind": "part"
   },
   {
    "slug": "zephyr_prime_set",
    "name": "Zephyr Prime Set",
-   "ducats": 205
+   "ducats": 205,
+   "group": "warframe",
+   "kind": "set"
+  },
+  {
+   "slug": "zephyr_prime_systems_blueprint",
+   "name": "Zephyr Prime Systems Blueprint",
+   "ducats": 100,
+   "group": "warframe",
+   "kind": "part"
+  },
+  {
+   "slug": "zhuge_prime_barrel",
+   "name": "Zhuge Prime Barrel",
+   "ducats": 100,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "zhuge_prime_blueprint",
+   "name": "Zhuge Prime Blueprint",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "zhuge_prime_grip",
+   "name": "Zhuge Prime Grip",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "zhuge_prime_receiver",
+   "name": "Zhuge Prime Receiver",
+   "ducats": 45,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "zhuge_prime_set",
+   "name": "Zhuge Prime Set",
+   "ducats": 220,
+   "group": "primary",
+   "kind": "set"
+  },
+  {
+   "slug": "zhuge_prime_string",
+   "name": "Zhuge Prime String",
+   "ducats": 15,
+   "group": "primary",
+   "kind": "part"
+  },
+  {
+   "slug": "zylok_prime_barrel",
+   "name": "Zylok Prime Barrel",
+   "ducats": 15,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "zylok_prime_blueprint",
+   "name": "Zylok Prime Blueprint",
+   "ducats": 100,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "zylok_prime_receiver",
+   "name": "Zylok Prime Receiver",
+   "ducats": 45,
+   "group": "secondary",
+   "kind": "part"
+  },
+  {
+   "slug": "zylok_prime_set",
+   "name": "Zylok Prime Set",
+   "ducats": 160,
+   "group": "secondary",
+   "kind": "set"
   }
  ]
 }
