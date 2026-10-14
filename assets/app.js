@@ -1,4 +1,4 @@
-// Prime Set Tracker (beta): renders data/latest.json as a wall of cards.
+// Prime Price Tracker (beta): renders data/latest.json as a wall of cards.
 (() => {
   "use strict";
 
@@ -9,7 +9,15 @@
   const notice = document.getElementById("notice");
   const sortSel = document.getElementById("sort");
   const search = document.getElementById("search");
+  const groupTabs = document.getElementById("groups");
+  const kindTabs = document.getElementById("kinds");
+  const heading = document.getElementById("heading");
+  const count = document.getElementById("count");
+  const GROUPS = { warframe: "Warframes", primary: "Primary weapons", secondary: "Secondary weapons", melee: "Melee weapons" };
+  const SINGULAR = { warframe: "Warframe", primary: "Primary", secondary: "Secondary", melee: "Melee" };
+  const KINDS = { set: "sets", part: "parts", all: "sets and parts" };
   let sets = [];
+  let view = { group: "warframe", kind: "set" };
 
   const el = (tag, cls, text) => {
     const n = document.createElement(tag);
@@ -80,7 +88,11 @@
     if (item.change_pct != null && item.change_pct < -4) a.classList.add("deal");
 
     const head = el("div", "card-head");
-    head.appendChild(el("div", "card-name", shortName(item.name)));
+    const title = el("div", "card-title");
+    const sub = `${SINGULAR[item.group] || ""} ${item.kind === "part" ? "part" : "set"}` +
+      (item.ducats ? ` · ${item.ducats} ducats` : "");
+    title.append(el("div", "card-sub", sub.trim()), el("div", "card-name", shortName(item.name)));
+    head.appendChild(title);
     let badge;
     if (item.change_pct == null) badge = el("span", "badge", "New");
     else {
@@ -114,10 +126,33 @@
     "price-high": (a, b) => (b.sell ?? -Infinity) - (a.sell ?? -Infinity),
   };
 
+  // Searching looks across every category; otherwise the tabs pick what to show.
   function render() {
     const q = search.value.trim().toLowerCase();
-    const list = sets.filter((s) => s.name.toLowerCase().includes(q)).sort(sorters[sortSel.value] || sorters.name);
-    grid.replaceChildren(...(list.length ? list.map(card) : [el("p", "empty", "No sets match your search.")]));
+    const list = sets
+      .filter((s) => (q ? s.name.toLowerCase().includes(q)
+        : s.group === view.group && (view.kind === "all" || s.kind === view.kind)))
+      .sort(sorters[sortSel.value] || sorters.name);
+    for (const [tabs, key] of [[groupTabs, "group"], [kindTabs, "kind"]]) {
+      tabs.classList.toggle("off", !!q);
+      for (const b of tabs.querySelectorAll("button")) b.setAttribute("aria-pressed", String(b.dataset[key] === view[key]));
+    }
+    heading.textContent = q ? "Search results" : GROUPS[view.group];
+    count.textContent = q ? `${list.length} matches in all categories` : `${list.length} ${KINDS[view.kind]}`;
+    grid.replaceChildren(...(list.length ? list.map(card) : [el("p", "empty", "Nothing matches your search.")]));
+  }
+
+  function readHash() {
+    const [group, kind] = location.hash.slice(1).split("/");
+    if (GROUPS[group]) view.group = group;
+    if (KINDS[kind]) view.kind = kind;
+  }
+
+  function pick(key, value) {
+    view[key] = value;
+    search.value = "";
+    history.replaceState(null, "", `#${view.group}/${view.kind}`);
+    render();
   }
 
   async function load() {
@@ -125,7 +160,7 @@
       const res = await fetch(`data/latest.json?t=${Date.now()}`, { cache: "no-store" });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
-      sets = data.sets || [];
+      sets = (data.sets || []).map((s) => ({ group: "warframe", kind: "set", ...s })); // pre-0.2 data had sets only
       document.getElementById("version").textContent = `v${data.version}`;
       meta.textContent = data.snapshot
         ? `warframe.market · ${data.platform.toUpperCase()} · updated ${ago(data.snapshot)}`
@@ -144,7 +179,10 @@
     }
   }
 
+  groupTabs.addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) pick("group", b.dataset.group); });
+  kindTabs.addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) pick("kind", b.dataset.kind); });
   sortSel.addEventListener("change", render);
   search.addEventListener("input", render);
+  readHash();
   load();
 })();

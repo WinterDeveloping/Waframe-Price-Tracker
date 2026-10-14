@@ -70,6 +70,8 @@ def build(history: Path, sets: list, at: datetime, platform: str, version: str) 
             "slug": slug,
             "name": s["name"],
             "ducats": s.get("ducats"),
+            "group": s.get("group", "warframe"),
+            "kind": s.get("kind", "set"),
             "sell": sell,
             "buy": buy,
             "avg7": avg7,

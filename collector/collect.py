@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
-"""Hourly snapshot of prime Warframe set prices from warframe.market.
+"""Hourly snapshot of prime item prices from warframe.market.
+
+Tracks prime Warframes and prime primary, secondary and melee weapons: each
+full set and each of its parts and blueprints.
 
 One run:
-1. refreshes the list of prime Warframe sets when the catalogue changed (or weekly),
-2. reads the top orders for each set and appends one row per set to
+1. refreshes the list of tracked items when the catalogue changed (or weekly),
+2. reads the top orders for each item and appends one row per item to
    data/history/YYYY-MM.csv (lowest sell, highest buy),
 3. rebuilds data/latest.json, which the web page reads,
 4. checks price alerts.
@@ -31,6 +34,9 @@ PLATFORM = os.environ.get("WFM_PLATFORM", "pc")
 FIELDS = ["ts", "slug", "sell", "buy", "source"]
 CATALOGUE_MAX_AGE = timedelta(days=7)
 MAX_FAILED_SHARE = 0.5  # more failures than this means something is wrong: write nothing
+CATALOGUE_SCOPE = 2     # bump when the rules for which items to track change, to force a refresh
+WEAPON_CLASSES = ("primary", "secondary", "melee")
+SKIP_TAGS = {"archwing", "mod", "skin", "sentinel", "necramech"}
 
 
 def now() -> datetime:
@@ -51,39 +57,71 @@ def save_json(path: Path, data) -> None:
     path.write_text(json.dumps(data, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
-def is_prime_warframe_set(item: dict) -> bool:
-    tags = set(item.get("tags", []))
-    return {"set", "prime", "warframe"} <= tags
+def item_name(item: dict) -> str:
+    return (item.get("i18n", {}).get("en") or {}).get("name") or item["slug"]
+
+
+def classify(items: list) -> list:
+    """Pick the prime Warframe and weapon sets and parts out of the catalogue.
+
+    Each result has a group (warframe, primary, secondary or melee) and a kind
+    (set or part). Weapon parts such as "Nikana Prime Blade" carry no
+    primary/secondary/melee tag, so they take the group of the weapon set
+    whose name they start with.
+    """
+    prime = [i for i in items if "prime" in i.get("tags", []) and not SKIP_TAGS & set(i["tags"])]
+
+    weapon_sets = {}  # "Nikana Prime" -> "melee"
+    for item in prime:
+        tags = set(item["tags"])
+        if {"weapon", "set"} <= tags:
+            cls = next((c for c in WEAPON_CLASSES if c in tags), None)
+            if cls:
+                weapon_sets[item_name(item).removesuffix(" Set")] = cls
+
+    out = []
+    for item in prime:
+        tags, name = set(item["tags"]), item_name(item)
+        if "warframe" in tags:
+            group = "warframe"
+        elif "weapon" in tags:
+            group = next((c for c in WEAPON_CLASSES if c in tags), None)
+            if group is None:
+                base = max((b for b in weapon_sets if name.startswith(b + " ")), key=len, default=None)
+                group = weapon_sets.get(base)
+        else:
+            group = None
+        if group is None:
+            continue
+        out.append({"slug": item["slug"], "name": name, "ducats": item.get("ducats"),
+                    "group": group, "kind": "set" if "set" in tags else "part"})
+    out.sort(key=lambda s: s["name"])
+    return out
 
 
 def refresh_sets(at: datetime) -> list:
-    """Return the prime Warframe sets, re-downloading the catalogue only when needed."""
+    """Return the tracked items, re-downloading the catalogue only when needed."""
     cached = load_json(SETS_FILE, None)
     versions = wfm.get("/v2/versions", PLATFORM).get("data")
     fingerprint = json.dumps(versions, sort_keys=True)
 
     if cached:
         fetched = datetime.fromisoformat(cached["fetched"].replace("Z", "+00:00"))
-        if cached.get("versions") == fingerprint and at - fetched < CATALOGUE_MAX_AGE:
+        fresh = cached.get("versions") == fingerprint and at - fetched < CATALOGUE_MAX_AGE
+        if fresh and cached.get("scope") == CATALOGUE_SCOPE:
             return cached["sets"]
 
-    items = wfm.get("/v2/items", PLATFORM).get("data") or []
-    sets = []
-    for item in items:
-        if not is_prime_warframe_set(item):
-            continue
-        name = (item.get("i18n", {}).get("en") or {}).get("name") or item["slug"]
-        sets.append({"slug": item["slug"], "name": name, "ducats": item.get("ducats")})
-    sets.sort(key=lambda s: s["name"])
-    if not sets:
+    sets = classify(wfm.get("/v2/items", PLATFORM).get("data") or [])
+    if not any(s["group"] == "warframe" and s["kind"] == "set" for s in sets):
         raise wfm.ApiError("item catalogue had no prime Warframe sets; the API may have changed")
 
     save_json(SETS_FILE, {
         "fetched": at.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "versions": fingerprint,
+        "scope": CATALOGUE_SCOPE,
         "sets": sets,
     })
-    print(f"catalogue refreshed: {len(sets)} prime Warframe sets")
+    print(f"catalogue refreshed: {len(sets)} prime items")
     return sets
 
 
@@ -133,11 +171,11 @@ def main() -> int:
                      "buy": "" if buy is None else buy, "source": "live"})
 
     if len(failed) > len(sets) * MAX_FAILED_SHARE:
-        print(f"{len(failed)} of {len(sets)} sets failed; not saving this run")
+        print(f"{len(failed)} of {len(sets)} items failed; not saving this run")
         return 1
 
     added = append_rows(hour, rows)
-    print(f"saved {added} rows ({len(failed)} sets failed)")
+    print(f"saved {added} rows ({len(failed)} items failed)")
 
     latest = summary.build(HISTORY, sets, at, PLATFORM, wfm.VERSION)
     save_json(DATA / "latest.json", latest)

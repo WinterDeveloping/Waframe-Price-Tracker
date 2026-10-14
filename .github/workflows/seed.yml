@@ -15,7 +15,7 @@ concurrency:
 jobs:
   seed:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 25  # ~700 items at 2.5 requests/second is about 5 minutes
     steps:
       - uses: actions/checkout@v4
 

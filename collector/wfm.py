@@ -15,7 +15,7 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
-VERSION = "0.1.0-beta"
+VERSION = "0.2.0-beta"
 API = "https://api.warframe.market"
 REQUEST_GAP = 0.4  # seconds between requests: about 2.5 per second
 RETRIES = 3

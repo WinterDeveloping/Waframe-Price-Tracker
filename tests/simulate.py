@@ -19,18 +19,25 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SETS = {  # slug: (name, ducats, starting price) - item fields mirror /v2/items
-    "nova_prime_set": ("Nova Prime Set", None, 74),
-    "mag_prime_set": ("Mag Prime Set", None, 74),
-    "frost_prime_set": ("Frost Prime Set", 175, 47),
-    "hydroid_prime_set": ("Hydroid Prime Set", 205, 54),
+SETS = {  # slug: (name, ducats, starting price, tags, expected group/kind) - item fields mirror /v2/items
+    "nova_prime_set": ("Nova Prime Set", None, 74, ["set", "prime", "warframe"], "warframe/set"),
+    "mag_prime_set": ("Mag Prime Set", None, 74, ["set", "prime", "warframe"], "warframe/set"),
+    "frost_prime_set": ("Frost Prime Set", 175, 47, ["set", "prime", "warframe"], "warframe/set"),
+    "hydroid_prime_set": ("Hydroid Prime Set", 205, 54, ["set", "prime", "warframe"], "warframe/set"),
+    "zephyr_prime_chassis_blueprint": ("Zephyr Prime Chassis Blueprint", 45, 12,
+                                       ["component", "prime", "warframe", "blueprint"], "warframe/part"),
+    "vasto_prime_set": ("Vasto Prime Set", None, 20, ["weapon", "prime", "set", "secondary"], "secondary/set"),
+    "nikana_prime_set": ("Nikana Prime Set", None, 60, ["weapon", "prime", "set", "melee"], "melee/set"),
+    # Weapon components have no primary/secondary/melee tag; the group comes from the set's name.
+    "nikana_prime_blade": ("Nikana Prime Blade", 65, 15, ["component", "weapon", "prime"], "melee/part"),
 }
 OTHER_ITEMS = [  # real catalogue entries that must NOT be picked up
-    {"id": "56783f24cbfa8f0432dd89b0", "slug": "vasto_prime_set", "tags": ["weapon", "prime", "set", "secondary"],
-     "i18n": {"en": {"name": "Vasto Prime Set"}}},
-    {"id": "5ab1570db2b6a8044d5137c3", "slug": "zephyr_prime_chassis_blueprint",
-     "tags": ["component", "prime", "warframe", "blueprint"], "i18n": {"en": {"name": "Zephyr Prime Chassis Blueprint"}}},
     {"id": "57222f1c92cc365777a61c0f", "slug": "mantis_set", "tags": ["set"], "i18n": {"en": {"name": "Mantis Set"}}},
+    {"id": "x1", "slug": "helios_prime_carapace", "tags": ["component", "prime", "weapon"],
+     "i18n": {"en": {"name": "Helios Prime Carapace"}}},
+    {"id": "x2", "slug": "helios_prime_set", "tags": ["prime", "sentinel", "set"], "i18n": {"en": {"name": "Helios Prime Set"}}},
+    {"id": "x3", "slug": "kavasa_prime_band", "tags": ["prime"], "i18n": {"en": {"name": "Kavasa Prime Band"}}},
+    {"id": "x4", "slug": "odonata_prime_set", "tags": ["archwing", "prime", "set"], "i18n": {"en": {"name": "Odonata Prime Set"}}},
 ]
 
 
@@ -45,8 +52,8 @@ def write_fixtures(folder: Path, prices: dict, catalogue_version: str):
     folder.mkdir(parents=True, exist_ok=True)
     for old in folder.glob("v2_orders_item_*_top.json"):
         old.unlink()
-    items =[{"id": f"id-{slug}", "slug": slug, "tags": ["set", "prime", "warframe"], "ducats": d,
-              "i18n": {"en": {"name": name}}} for slug, (name, d, _) in SETS.items()] + OTHER_ITEMS
+    items = [{"id": f"id-{slug}", "slug": slug, "tags": tags, "ducats": d,
+              "i18n": {"en": {"name": name}}} for slug, (name, d, _, tags, _) in SETS.items()] + OTHER_ITEMS
     (folder / "v2_items.json").write_text(json.dumps({"apiVersion": "0.25.0", "data": items, "error": None}))
     (folder / "v2_versions.json").write_text(json.dumps({"apiVersion": "0.25.0",
                                                          "data": {"collections": {"items": catalogue_version}}}))
@@ -64,7 +71,7 @@ def main():
     work = Path(tempfile.mkdtemp(prefix="pst-"))
     data, fixtures = work / "data", work / "fixtures"
     rng = random.Random(7)
-    price = {slug: start for slug, (_, _, start) in SETS.items()}
+    price = {slug: start for slug, (_, _, start, _, _) in SETS.items()}
     start = datetime(2026, 10, 1, tzinfo=timezone.utc)
     env = {**os.environ, "WFM_FIXTURES": str(fixtures), "WFM_DATA_DIR": str(data)}
     env.pop("DISCORD_WEBHOOK_URL", None)
@@ -93,14 +100,17 @@ def main():
 
     latest = json.loads((data / "latest.json").read_text())
     slugs = [s["slug"] for s in latest["sets"]]
-    assert sorted(slugs) == sorted(SETS), f"wrong sets picked: {slugs}"
+    assert sorted(slugs) == sorted(SETS), f"wrong items picked: {slugs}"
+    for s in latest["sets"]:
+        assert f"{s['group']}/{s['kind']}" == SETS[s["slug"]][4], s
     nova = next(s for s in latest["sets"] if s["slug"] == "nova_prime_set")
     assert nova["sell"] == price["nova_prime_set"], nova
     assert nova["buy"] == price["nova_prime_set"] - 5, nova
     assert nova["avg30"] is not None and nova["change_pct"] is not None, nova
     assert len(nova["spark"]) == 30 and sum(v is not None for v in nova["spark"]) == 14, nova["spark"]
     rows = (data / "history" / "2026-10.csv").read_text().strip().splitlines()
-    assert len(rows) - 1 == runs * 4 - 2, f"expected {runs * 4 - 2} rows, got {len(rows) - 1}"
+    expected = runs * len(SETS) - 2  # hydroid's two missing runs
+    assert len(rows) - 1 == expected, f"expected {expected} rows, got {len(rows) - 1}"
     print(f"ok: {runs} simulated runs, {len(rows) - 1} history rows, "
           f"Nova {nova['sell']:g}p vs 30d avg {nova['avg30']}p ({nova['change_pct']:+}%)")
 
