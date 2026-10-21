@@ -1,6 +1,6 @@
 {
- "fetched": "2026-10-18T01:07:35Z",
- "versions": "{\"apps\": {\"android\": \"0.0.1\", \"ios\": \"0.0.1\", \"minAndroid\": \"\", \"minIos\": \"\"}, \"collections\": {\"items\": \"MjAyNi0xMC0xOFQwMDo1Mjo1Mg==\", \"liches\": \"MjAyNi0wOS0yN1QyMDoxNDo0OA==\", \"locations\": \"MjAyNi0wOS0yM1QxNjowMjowMA==\", \"missions\": \"MjAyNi0xMC0wOFQwMDo0MToxMw==\", \"npcs\": \"MjAyNi0wNy0xMVQxNTo0NzoxMg==\", \"rivens\": \"MjAyNi0xMC0wOFQwMDowNzozMQ==\", \"sisters\": \"MjAyNi0wOS0yN1QyMDoxNDo0OA==\"}, \"id\": \"6ad4186494ce7be7f4de8e1a\", \"updatedAt\": \"2026-10-18T00:52:52Z\"}",
+ "fetched": "2026-10-21T18:41:40Z",
+ "versions": "{\"apps\": {\"android\": \"0.0.1\", \"ios\": \"0.0.1\", \"minAndroid\": \"\", \"minIos\": \"\"}, \"collections\": {\"items\": \"MjAyNi0xMC0xOFQwMDo1Mjo1Mg==\", \"liches\": \"MjAyNi0wOS0yN1QyMDoxNDo0OA==\", \"locations\": \"MjAyNi0wOS0yM1QxNjowMjowMA==\", \"missions\": \"MjAyNi0xMC0wOFQwMDo0MToxMw==\", \"npcs\": \"MjAyNi0wNy0xMVQxNTo0NzoxMg==\", \"rivens\": \"MjAyNi0xMC0yMVQxNjowMDoxMA==\", \"sisters\": \"MjAyNi0wOS0yN1QyMDoxNDo0OA==\"}, \"id\": \"6ad8e18af3fe360175e743e6\", \"updatedAt\": \"2026-10-21T16:00:10Z\"}",
  "scope": 3,
  "sets": [
   {
