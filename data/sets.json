@@ -1,6 +1,6 @@
 {
- "fetched": "2026-10-21T18:41:40Z",
- "versions": "{\"apps\": {\"android\": \"0.0.1\", \"ios\": \"0.0.1\", \"minAndroid\": \"\", \"minIos\": \"\"}, \"collections\": {\"items\": \"MjAyNi0xMC0xOFQwMDo1Mjo1Mg==\", \"liches\": \"MjAyNi0wOS0yN1QyMDoxNDo0OA==\", \"locations\": \"MjAyNi0wOS0yM1QxNjowMjowMA==\", \"missions\": \"MjAyNi0xMC0wOFQwMDo0MToxMw==\", \"npcs\": \"MjAyNi0wNy0xMVQxNTo0NzoxMg==\", \"rivens\": \"MjAyNi0xMC0yMVQxNjowMDoxMA==\", \"sisters\": \"MjAyNi0wOS0yN1QyMDoxNDo0OA==\"}, \"id\": \"6ad8e18af3fe360175e743e6\", \"updatedAt\": \"2026-10-21T16:00:10Z\"}",
+ "fetched": "2026-10-22T13:50:40Z",
+ "versions": "{\"apps\": {\"android\": \"0.0.1\", \"ios\": \"0.0.1\", \"minAndroid\": \"\", \"minIos\": \"\"}, \"collections\": {\"items\": \"MjAyNi0xMC0yMlQwODo1MjoyMA==\", \"liches\": \"MjAyNi0wOS0yN1QyMDoxNDo0OA==\", \"locations\": \"MjAyNi0wOS0yM1QxNjowMjowMA==\", \"missions\": \"MjAyNi0xMC0wOFQwMDo0MToxMw==\", \"npcs\": \"MjAyNi0wNy0xMVQxNTo0NzoxMg==\", \"rivens\": \"MjAyNi0xMC0yMVQxNjowMDoxMA==\", \"sisters\": \"MjAyNi0wOS0yN1QyMDoxNDo0OA==\"}, \"id\": \"6ad9cec4f3fe360175e744ad\", \"updatedAt\": \"2026-10-22T08:52:20Z\"}",
  "scope": 3,
  "sets": [
   {
@@ -966,7 +966,7 @@
   {
    "slug": "bronco_prime_barrel",
    "name": "Bronco Prime Barrel",
-   "ducats": 45,
+   "ducats": 25,
    "group": "secondary",
    "kind": "part",
    "vaulted": false
@@ -990,7 +990,7 @@
   {
    "slug": "bronco_prime_set",
    "name": "Bronco Prime Set",
-   "ducats": 75,
+   "ducats": 55,
    "group": "secondary",
    "kind": "set",
    "vaulted": false
