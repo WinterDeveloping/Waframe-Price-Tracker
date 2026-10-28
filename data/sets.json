@@ -1,6 +1,6 @@
 {
- "fetched": "2026-10-25T14:24:55Z",
- "versions": "{\"apps\": {\"android\": \"0.0.1\", \"ios\": \"0.0.1\", \"minAndroid\": \"\", \"minIos\": \"\"}, \"collections\": {\"items\": \"MjAyNi0xMC0yNVQxMjozMDoyOA==\", \"liches\": \"MjAyNi0wOS0yN1QyMDoxNDo0OA==\", \"locations\": \"MjAyNi0wOS0yM1QxNjowMjowMA==\", \"missions\": \"MjAyNi0xMC0wOFQwMDo0MToxMw==\", \"npcs\": \"MjAyNi0wNy0xMVQxNTo0NzoxMg==\", \"rivens\": \"MjAyNi0xMC0yMVQxNjowMDoxMA==\", \"sisters\": \"MjAyNi0wOS0yN1QyMDoxNDo0OA==\"}, \"id\": \"6addf665f8e7a2554e52ef5c\", \"updatedAt\": \"2026-10-25T12:30:28Z\"}",
+ "fetched": "2026-10-28T05:49:31Z",
+ "versions": "{\"apps\": {\"android\": \"0.0.1\", \"ios\": \"0.0.1\", \"minAndroid\": \"\", \"minIos\": \"\"}, \"collections\": {\"items\": \"MjAyNi0xMC0yOFQwMzo1MjowOQ==\", \"liches\": \"MjAyNi0wOS0yN1QyMDoxNDo0OA==\", \"locations\": \"MjAyNi0wOS0yM1QxNjowMjowMA==\", \"missions\": \"MjAyNi0xMC0wOFQwMDo0MToxMw==\", \"npcs\": \"MjAyNi0wNy0xMVQxNTo0NzoxMg==\", \"rivens\": \"MjAyNi0xMC0yMVQxNjowMDoxMA==\", \"sisters\": \"MjAyNi0wOS0yN1QyMDoxNDo0OA==\"}, \"id\": \"6ae1716af8ac355d8e222db5\", \"updatedAt\": \"2026-10-28T03:52:09Z\"}",
  "scope": 3,
  "sets": [
   {
@@ -1329,7 +1329,7 @@
    "ducats": 15,
    "group": "melee",
    "kind": "part",
-   "vaulted": null
+   "vaulted": false
   },
   {
    "slug": "corufell_prime_handle",
@@ -1337,7 +1337,7 @@
    "ducats": 45,
    "group": "melee",
    "kind": "part",
-   "vaulted": null
+   "vaulted": false
   },
   {
    "slug": "corufell_prime_receiver",
@@ -1345,7 +1345,7 @@
    "ducats": 100,
    "group": "melee",
    "kind": "part",
-   "vaulted": null
+   "vaulted": false
   },
   {
    "slug": "corufell_prime_set",
@@ -1353,7 +1353,7 @@
    "ducats": 175,
    "group": "melee",
    "kind": "set",
-   "vaulted": null
+   "vaulted": false
   },
   {
    "slug": "corufell_prime_stock",
@@ -1361,7 +1361,7 @@
    "ducats": 15,
    "group": "melee",
    "kind": "part",
-   "vaulted": null
+   "vaulted": false
   },
   {
    "slug": "daikyu_prime_blueprint",
@@ -3134,7 +3134,7 @@
   {
    "slug": "nami_skyla_prime_blade",
    "name": "Nami Skyla Prime Blade",
-   "ducats": 100,
+   "ducats": 65,
    "group": "melee",
    "kind": "part",
    "vaulted": true
@@ -3158,7 +3158,7 @@
   {
    "slug": "nami_skyla_prime_set",
    "name": "Nami Skyla Prime Set",
-   "ducats": 305,
+   "ducats": 235,
    "group": "melee",
    "kind": "set",
    "vaulted": true
